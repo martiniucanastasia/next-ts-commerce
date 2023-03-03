@@ -9,16 +9,16 @@ const colors = css`
   --gray-600: #505050;
   --gray-700: #1c1c1c;
 
-  --primary-color: #0d6efd;
-  --primary-lighter-color: #e3f0ff;
+  --primary: #0d6efd;
+  --primary-100: #e3f0ff;
 
-  --secondary-color: #00b517;
-  --secondary-lighter-color: #c3ffcb;
+  --secondary: #00b517;
+  --secondary-100: #c3ffcb;
 
-  --danger-color: #fa3434;
+  --danger: #fa3434;
 
-  --warning-color: #ff9017;
-  --warning-lighter-color: #ffe5bf;
+  --warning: #ff9017;
+  --warning-100: #ffe5bf;
 `;
 
 const fontSizes = css`
