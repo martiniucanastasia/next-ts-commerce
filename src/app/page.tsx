@@ -1,3 +1,12 @@
-export default function Home() {
-  return <p>Hello World</p>;
+"use client";
+
+import { GlobalStyles } from "@/styles/global";
+
+export default function Page() {
+  return (
+    <div>
+      <GlobalStyles />
+      <h1>Hello World</h1>
+    </div>
+  );
 }
