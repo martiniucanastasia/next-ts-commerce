@@ -9,15 +9,16 @@ const colors = css`
   --gray-600: #505050;
   --gray-700: #1c1c1c;
 
-  --blue-100: #e3f0ff;
-  --blue-200: #0d6efd;
+  --primary-color: #0d6efd;
+  --primary-lighter-color: #e3f0ff;
 
-  --green-100: #c3ffcb;
-  --green-200: #00b517;
+  --secondary-color: #00b517;
+  --secondary-lighter-color: #c3ffcb;
 
-  --orange-100: #ffe5bf;
-  --orange-200: #ff9017;
-  --orange-300: #fa3434;
+  --danger-color: #fa3434;
+
+  --warning-color: #ff9017;
+  --warning-lighter-color: #ffe5bf;
 `;
 
 const fontSizes = css`
@@ -33,7 +34,6 @@ const fontSizes = css`
 
 const fontFamilies = css`
   --font-primary: "Inter";
-  --font-primary-bold: "InterBold";
 `;
 
 export const variables = css`

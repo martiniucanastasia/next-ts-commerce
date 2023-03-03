@@ -6,7 +6,7 @@ export const Global = createGlobalStyle`
 ${variables}
 ${fontStyles}
 
-* {
+ * {
     box-sizing: border-box;
   }
 
@@ -18,14 +18,6 @@ ${fontStyles}
     height: 100%;
   }
 
-  button {
-    border: none;
-  }
-
-  button {
-    border: none;
-  }
-
   p {
     margin: 0;
   }
@@ -33,9 +25,11 @@ ${fontStyles}
   img {
     vertical-align: bottom;
   }
+
   li {
     list-style: none;
   }
+  
   a {
     color: inherit;
     text-decoration: none;
