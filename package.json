@@ -4,12 +4,16 @@
   "private": true,
   "author": "Anastasia Martiniuc",
   "description": "Next.js E-Commerce",
-  "keywords": ["Next.js", "React", "TypeScript"],
+  "keywords": [
+    "Next.js",
+    "React",
+    "TypeScript"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",    
+    "lint": "next lint",
     "server": "json-server --watch --port 4000 src/db/db.json --routes src/db/routes.json"
   },
   "dependencies": {
@@ -26,6 +30,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@types/styled-components": "^5.1.26"
   }
 }

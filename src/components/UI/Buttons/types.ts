@@ -6,5 +6,3 @@ export interface ButtonProps {
   onClick?: (() => void) | MouseEventHandler<HTMLButtonElement>;
   children?: React.ReactNode;
 }
-
-export type IconButtonProps = ButtonProps;

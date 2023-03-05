@@ -11,5 +11,3 @@ export const Button = ({
     {children}
   </S.Button>
 );
-
-
