@@ -14,7 +14,6 @@ ${fontStyles}
     font-family: var(--font-primary), sans-serif, Tahoma;
   }
   
-
   h1, h2, h3, h4, h5 {
     margin: 0;
   }

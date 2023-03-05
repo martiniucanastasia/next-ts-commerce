@@ -12,7 +12,7 @@ export const fontStyles = css`
   }
 
   @font-face {
-    font-family: "Inter Bold";
+    font-family: "Inter";
     font-style: normal;
     font-weight: bold;
     font-display: swap;
