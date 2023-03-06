@@ -11,6 +11,7 @@ ${fontStyles}
   }
 
   body {
+    margin: 0;
     font-family: var(--font-primary), sans-serif, Tahoma;
   }
   
@@ -18,7 +19,7 @@ ${fontStyles}
     margin: 0;
   }
 
-  html, body, #root {
+  html, body {
     height: 100%;
   }
 
@@ -28,6 +29,10 @@ ${fontStyles}
 
   img {
     vertical-align: bottom;
+  }
+
+  ul {
+    margin: 0;
   }
 
   li {
