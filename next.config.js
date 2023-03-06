@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
   },
   distDir: "build",
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 module.exports = nextConfig;
