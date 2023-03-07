@@ -1,5 +1,5 @@
 import { pxToRem } from "@/styles/_common";
-import { ButtonProps } from "../types";
+import { ButtonProps, Size, Variant, Visual } from "../types";
 
 import styled, {
   css,
@@ -11,7 +11,7 @@ import styled, {
 const getSizeStyles = ({
   size = "normal",
 }: ThemedStyledProps<Pick<ButtonProps, "size">, DefaultTheme>) => {
-  const mapper: Record<string, FlattenSimpleInterpolation> = {
+  const mapper: Record<Size, FlattenSimpleInterpolation> = {
     small: css`
       gap: ${pxToRem(15)};
       padding: ${pxToRem(7)} ${pxToRem(10)};
@@ -55,7 +55,7 @@ const getSizeStyles = ({
 export const getVariantStyles = ({
   variant = "primary",
 }: ThemedStyledProps<Pick<ButtonProps, "variant">, DefaultTheme>) => {
-  const mapper: Record<string, FlattenSimpleInterpolation> = {
+  const mapper: Record<Variant, FlattenSimpleInterpolation> = {
     primary: css`
       color: white;
       background-image: var(--primary-gradient);
@@ -114,7 +114,7 @@ export const getVariantStyles = ({
 export const getGroupStyles = ({
   visual = "standart",
 }: ThemedStyledProps<Pick<ButtonProps, "visual">, DefaultTheme>) => {
-  const mapper: Record<string, FlattenSimpleInterpolation> = {
+  const mapper: Record<Visual, FlattenSimpleInterpolation> = {
     left: css`
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;

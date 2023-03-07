@@ -1,5 +1,5 @@
 import { pxToRem } from "@/styles/_common";
-import { ButtonProps } from "../types";
+import { ButtonProps, Size } from "../types";
 
 import styled, {
   css,
@@ -14,7 +14,7 @@ import { getGroupStyles } from "./buttonStyles";
 const getIconButtonStyles = ({
   size = "normal",
 }: ThemedStyledProps<Pick<ButtonProps, "size">, DefaultTheme>) => {
-  const mapper: Record<string, FlattenSimpleInterpolation> = {
+  const mapper: Record<Size, FlattenSimpleInterpolation> = {
     small: css`
       padding: ${pxToRem(7)};
       height: ${pxToRem(30)};

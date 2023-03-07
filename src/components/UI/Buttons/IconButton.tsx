@@ -3,7 +3,7 @@ import { ButtonProps } from "./types";
 
 export const IconButton = ({
   size = "normal",
-  variant,
+  variant = "primary",
   visual,
   onClick,
   children,
