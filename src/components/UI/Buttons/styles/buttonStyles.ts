@@ -148,9 +148,12 @@ export const buttonStyled = {
     outline: none;
     appearance: none;
     margin: 0;
-    padding: 0;
 
     cursor: pointer;
+
+    svg {
+      flex-shrink: 0;
+    }
 
     ${getSizeStyles}
     ${getVariantStyles}
