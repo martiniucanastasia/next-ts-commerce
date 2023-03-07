@@ -111,8 +111,35 @@ export const getVariantStyles = ({
   return mapper[variant];
 };
 
+export const getGroupStyles = ({
+  visual = "standart",
+}: ThemedStyledProps<Pick<ButtonProps, "visual">, DefaultTheme>) => {
+  const mapper: Record<string, FlattenSimpleInterpolation> = {
+    left: css`
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    `,
+    center: css`
+      border-radius: 0;
+    `,
+    right: css`
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    `,
+    standart: css`
+      border-radius: ${pxToRem(8)};
+    `,
+  };
+
+  return mapper[visual];
+};
+
 export const buttonStyled = {
-  Button: styled.button<Pick<ButtonProps, "size" | "variant">>`
+  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual">>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,11 +149,11 @@ export const buttonStyled = {
     appearance: none;
     margin: 0;
     padding: 0;
-    border-radius: ${pxToRem(8)};
 
     cursor: pointer;
 
     ${getSizeStyles}
     ${getVariantStyles}
+    ${getGroupStyles}
   `,
 };

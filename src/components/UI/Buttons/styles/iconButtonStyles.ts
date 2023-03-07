@@ -9,6 +9,7 @@ import styled, {
 } from "styled-components";
 
 import { getVariantStyles } from "./buttonStyles";
+import { getGroupStyles } from "./buttonStyles";
 
 const getIconButtonStyles = ({
   size = "normal",
@@ -35,7 +36,7 @@ const getIconButtonStyles = ({
 };
 
 export const iconButtonStyled = {
-  IconButton: styled.button<Pick<ButtonProps, "size" | "variant">>`
+  IconButton: styled.button<Pick<ButtonProps, "size" | "variant" | "visual">>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +46,11 @@ export const iconButtonStyled = {
     appearance: none;
     margin: 0;
     padding: 0;
-    border-radius: ${pxToRem(8)};
 
     cursor: pointer;
 
     ${getIconButtonStyles};
     ${getVariantStyles};
+    ${getGroupStyles};
   `,
 };

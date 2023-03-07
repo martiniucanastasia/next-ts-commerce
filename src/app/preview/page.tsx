@@ -55,6 +55,37 @@ export default function Preview() {
         <TestHeart />
       </IconButton>
       <br />
+
+      <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+        <br />
+        <Button size="large" variant="primary" visual="left">
+          Left
+        </Button>
+        <br />
+        <Button size="large" variant="secondary" visual="center">
+          Center
+        </Button>
+        <br />
+        <Button size="large" variant="tertiary" visual="right">
+          Right
+        </Button>
+      </div>
+      <br />
+      <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+        <br />
+        <IconButton size="large" variant="primary" visual="left">
+          <TestHeart />
+        </IconButton>
+        <br />
+        <IconButton size="large" variant="secondary" visual="center">
+          <TestHeart />
+        </IconButton>
+        <br />
+        <IconButton size="large" variant="tertiary" visual="right">
+          <TestHeart />
+        </IconButton>
+        <br />
+      </div>
     </>
   );
 }
