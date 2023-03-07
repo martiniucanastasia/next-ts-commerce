@@ -1,38 +1,50 @@
 import { pxToRem } from "@/styles/_common";
+import { ButtonProps } from "../types";
+
 import styled, {
   css,
   DefaultTheme,
   FlattenSimpleInterpolation,
   ThemedStyledProps,
 } from "styled-components";
-import { ButtonProps } from "../types";
 
 const getSizeStyles = ({
   size = "normal",
 }: ThemedStyledProps<Pick<ButtonProps, "size">, DefaultTheme>) => {
   const mapper: Record<string, FlattenSimpleInterpolation> = {
     small: css`
+      gap: ${pxToRem(15)};
       padding: ${pxToRem(7)} ${pxToRem(10)};
-      font-size: var(--text-xs);
+      min-height: ${pxToRem(30)};
+      font-size: var(--text-xxs);
 
-      & svg path {
+      svg {
         width: ${pxToRem(15)};
+        height: ${pxToRem(15)};
       }
     `,
+
     normal: css`
+      gap: ${pxToRem(20)};
       padding: ${pxToRem(10)} ${pxToRem(15)};
+      min-height: ${pxToRem(40)};
       font-size: var(--text-s);
 
-      & svg path {
+      svg {
         width: ${pxToRem(18)};
+        height: ${pxToRem(18)};
       }
     `,
+
     large: css`
-      padding: ${pxToRem(15)} ${pxToRem(15)};
+      gap: ${pxToRem(20)};
+      padding: ${pxToRem(15)} ${pxToRem(20)};
+      min-height: ${pxToRem(54)};
       font-size: var(--text-m);
 
-      & svg path {
+      svg {
         width: ${pxToRem(23)};
+        height: ${pxToRem(23)};
       }
     `,
   };
@@ -40,7 +52,7 @@ const getSizeStyles = ({
   return mapper[size];
 };
 
-const getVariantStyles = ({
+export const getVariantStyles = ({
   variant = "primary",
 }: ThemedStyledProps<Pick<ButtonProps, "variant">, DefaultTheme>) => {
   const mapper: Record<string, FlattenSimpleInterpolation> = {
@@ -49,7 +61,7 @@ const getVariantStyles = ({
       background-image: var(--primary-gradient);
 
       svg path {
-        fill: white;
+        fill: currentColor;
       }
 
       &:hover {
@@ -78,13 +90,29 @@ const getVariantStyles = ({
         fill: currentColor;
       }
     `,
+    quaternary: css`
+      background-color: var(--secondary);
+      color: white;
+
+      svg path {
+        fill: currentColor;
+      }
+    `,
+    fifth: css`
+      background-color: var(--warning);
+      color: white;
+
+      svg path {
+        fill: currentColor;
+      }
+    `,
   };
 
   return mapper[variant];
 };
 
 export const buttonStyled = {
-  Button: styled.button<Pick<ButtonProps, "variant" | "size">>`
+  Button: styled.button<Pick<ButtonProps, "size" | "variant">>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,12 +123,10 @@ export const buttonStyled = {
     margin: 0;
     padding: 0;
     border-radius: ${pxToRem(8)};
-    gap: ${pxToRem(20)};
 
-    transition: background-color 1s ease;
     cursor: pointer;
 
-    ${getSizeStyles};
-    ${getVariantStyles};
+    ${getSizeStyles}
+    ${getVariantStyles}
   `,
 };

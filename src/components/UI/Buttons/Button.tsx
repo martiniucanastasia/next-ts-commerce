@@ -2,8 +2,8 @@ import { buttonStyled as S } from "./styles/buttonStyles";
 import { ButtonProps } from "./types";
 
 export const Button = ({
-  size = "base",
-  variant,
+  size = "normal",
+  variant = "primary",
   onClick,
   children,
 }: ButtonProps) => (

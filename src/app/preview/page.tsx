@@ -1,69 +1,60 @@
 "use client";
 
 import { GlobalStyles } from "@/styles/global";
-import { Button } from "@/components/UI/Buttons/Button";
-import TestPic from "@/assets/svg/icon/general/0.svg";
+
+//Preview components
+import { Button } from "../../components/UI/Buttons/Button";
+import { IconButton } from "../../components/UI/Buttons/IconButton";
+
+import TestRight from "../../assets/svg/icon/control/arrow_back.svg";
+import TestLeft from "../../assets/svg/icon/control/arrow_forward.svg";
+import TestHeart from "../../assets/svg/icon/control/favorite_border.svg";
 
 export default function Preview() {
   return (
-    <div>
+    <>
       <GlobalStyles />
-      {/* Primary buttons */}
-      <Button variant="primary" size="large">
-        <TestPic />
-        Primary
+
+      <br />
+      <Button size="large" variant="primary">
+        <TestRight />
+        Hello
       </Button>
       <br />
-      <Button variant="primary" size="normal">
-        Primary
-        <TestPic />
+      <Button size="normal" variant="secondary">
+        Hello
+        <TestLeft />
       </Button>
       <br />
-      <Button variant="primary" size="small">
-        Primary
+      <Button size="small" variant="tertiary">
+        <TestRight />
+        Hello
       </Button>
       <br />
-      <Button variant="primary" size="small">
-        <TestPic />
-      </Button>
-      {/* Secondary buttons */}
+
       <br />
-      <Button variant="secondary" size="large">
-        <TestPic />
-        Secondary
+      <Button size="normal" variant="quaternary">
+        Hello
       </Button>
       <br />
-      <Button variant="secondary" size="normal">
-        Secondary
-        <TestPic />
+      <Button size="small" variant="fifth">
+        Hello
       </Button>
       <br />
-      <Button variant="secondary" size="small">
-        Secondary
-      </Button>
+
       <br />
-      <Button variant="secondary" size="small">
-        <TestPic />
-      </Button>
-      {/* Tertiary buttons */}
+      <IconButton size="large" variant="primary">
+        <TestHeart />
+      </IconButton>
       <br />
-      <Button variant="tertiary" size="large">
-        <TestPic />
-        Tertiary
-      </Button>
+      <IconButton size="normal" variant="secondary">
+        <TestHeart />
+      </IconButton>
       <br />
-      <Button variant="tertiary" size="normal">
-        Tertiary
-        <TestPic />
-      </Button>
+      <IconButton size="small" variant="tertiary">
+        <TestHeart />
+      </IconButton>
       <br />
-      <Button variant="tertiary" size="small">
-        Tertiary
-      </Button>
-      <br />
-      <Button variant="tertiary" size="small">
-        <TestPic />
-      </Button>
-    </div>
+    </>
   );
 }

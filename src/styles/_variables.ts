@@ -35,7 +35,8 @@ const fontSizes = css`
   --text-m: clamp(1.06rem, calc(1.04rem + 0.09vw), 1.13rem); // min 17, max 18
   --text-s: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem); // min 15, max 16
   --text-xs: clamp(0.81rem, calc(0.79rem + 0.09vw), 0.88rem); // min 13, max 14
-  --text-xxs: clamp(0.69rem, calc(0.67rem + 0.09vw), 0.75rem); // min 11, max 12
+  --text-xxs: clamp(0.75rem, calc(0.73rem + 0.09vw), 0.81rem); // min 12, max 13
+  --text-xxxs: clamp(0.69rem, calc(0.67rem + 0.09vw), 0.75rem); // min 11, max 12
 `;
 
 const fontFamilies = css`
