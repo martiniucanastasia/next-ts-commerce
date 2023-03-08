@@ -1,91 +1,21 @@
-"use client";
-
-import { GlobalStyles } from "@/styles/global";
-
 //Preview components
-import { Button } from "../../components/UI/Buttons/Button";
-import { IconButton } from "../../components/UI/Buttons/IconButton";
+import { Tabs } from "@/components/UI/Tabs/Tabs";
 
-import TestRight from "../../assets/svg/icon/control/arrow_back.svg";
-import TestLeft from "../../assets/svg/icon/control/arrow_forward.svg";
-import TestHeart from "../../assets/svg/icon/control/favorite_border.svg";
+const getCategories = async () => {
+  const res = await fetch("http://localhost:4000/categories");
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+};
 
-export default function Preview() {
+export default async function Preview() {
+  const categories = await getCategories();
   return (
     <>
-      <GlobalStyles />
-
+      <Tabs categories={categories} variant="primary" />
       <br />
-      <Button size="large" variant="primary">
-        <TestRight />
-        Hello
-      </Button>
-      <br />
-      <Button size="normal" variant="secondary">
-        Hello
-        <TestLeft />
-      </Button>
-      <br />
-      <Button size="small" variant="tertiary">
-        <TestRight />
-        Hello
-      </Button>
-      <br />
-
-      <br />
-      <Button size="normal" variant="quaternary">
-        Hello
-      </Button>
-      <br />
-      <Button size="small" variant="fifth">
-        Hello
-      </Button>
-      <br />
-
-      <br />
-      <IconButton size="large" variant="primary">
-        <TestHeart />
-      </IconButton>
-      <br />
-      <IconButton size="normal" variant="secondary">
-        <TestHeart />
-      </IconButton>
-      <br />
-      <IconButton size="small" variant="tertiary">
-        <TestHeart />
-      </IconButton>
-      <br />
-
-      <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-        <br />
-        <Button size="large" variant="primary" visual="left">
-          Left
-        </Button>
-        <br />
-        <Button size="large" variant="secondary" visual="center">
-          Center
-        </Button>
-        <br />
-        <Button size="large" variant="tertiary" visual="right">
-          Right
-        </Button>
-      </div>
-      <br />
-      <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
-        <br />
-        <IconButton size="large" variant="primary" visual="left">
-          <TestHeart />
-        </IconButton>
-        <br />
-        <IconButton size="large" variant="secondary" visual="center">
-          <TestHeart />
-        </IconButton>
-        <br />
-        <IconButton size="large" variant="tertiary" visual="right">
-          <TestHeart />
-        </IconButton>
-        <br />
-      </div>
+      <Tabs categories={categories} variant="secondary" />
     </>
   );
 }
