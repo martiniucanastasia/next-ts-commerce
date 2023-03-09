@@ -2,44 +2,35 @@
 
 //Preview components
 import { Checkbox } from "@/components/UI/Checkbox/Checkbox";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 export default function Preview() {
-  const [isChecked, setIsChecked] = useState(false);
+  // Just for presentation reasons
+  const [data, setData] = useState([
+    { id: 0, name: "Shoes", checked: false },
+    { id: 1, name: "Milk", checked: false },
+    { id: 2, name: "Flowers", checked: false },
+  ]);
 
-  const data = [
-    {
-      id: 0,
-      name: "Jane",
-    },
-    {
-      id: 1,
-      name: "James",
-    },
-    {
-      id: 2,
-      name: "Alexa",
-    },
-    {
-      id: 3,
-      name: "Jane",
-    },
-  ];
-
-  const handleChange = (): void => {
-    setIsChecked(!isChecked);
+  const handleChange = (id: number) => {
+    data[id].checked = !data[id].checked;
+    let todosClone = [...data];
+    todosClone[id] = data[id];
+    setData([...todosClone]);
   };
 
   return (
-    <div style={{ display: "flex", gap: "20px" }}>
+    <div style={{ display: "flex" }}>
       {data.map((item) => {
         return (
-          <Checkbox
-            key={item.id}
-            value={item}
-            isChecked={isChecked}
-            onChange={handleChange}
-          />
+          <div key={item.id}>
+            <Checkbox
+              label="Label" // or just remove label
+              value={item.name}
+              isChecked={item.checked}
+              onChange={() => handleChange(item.id)}
+            />
+          </div>
         );
       })}
     </div>

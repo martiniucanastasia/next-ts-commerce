@@ -17,15 +17,19 @@ const getCheckedColor = ({
     `,
     false: css`
       border: 2px solid var(--gray-400);
-      svg path {
-        visibility: hidden;
-      }
     `,
   };
   return mapper[`${isChecked}`];
 };
 
 export const checkboxStyles = {
+  CheckboxLabel: styled.p<Pick<CheckboxProps, "label">>`
+    font-size: var(--text-s);
+    color: var(--gray-700);
+  `,
+  CheckboxWrapper: styled.div`
+    padding: ${pxToRem(8)} ${pxToRem(15)} ${pxToRem(8)} 0;
+  `,
   Label: styled.label`
     display: inline-flex;
     position: relative;
@@ -38,24 +42,22 @@ export const checkboxStyles = {
     cursor: pointer;
   `,
   Input: styled.input`
-    margin-right: 15px;
+    margin-right: ${pxToRem(20)};
     opacity: 0;
   `,
 };
 
 export const checkboxStylesMask = {
-  CheckboxMask: styled.div<{ isChecked: boolean }>(
-    ({ isChecked }) => css`
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: ${pxToRem(20)};
-      height: ${pxToRem(20)};
-      padding: ${pxToRem(5)} ${pxToRem(3)};
-      border-radius: ${pxToRem(5)};
+  CheckboxMask: styled.div<{ isChecked: boolean }>`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${pxToRem(20)};
+    height: ${pxToRem(20)};
+    padding: ${pxToRem(5)} ${pxToRem(3)};
+    border-radius: ${pxToRem(5)};
 
-      ${getCheckedColor}
-    `
-  ),
+    ${getCheckedColor}
+  `,
 };
