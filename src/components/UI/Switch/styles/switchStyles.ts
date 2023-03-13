@@ -25,8 +25,10 @@ export const Switch = {
     position: relative;
 
     padding: ${pxToRem(5)} 0;
+
+    cursor: pointer;
   `,
-  SwitchWrapper: styled.form`
+  SwitchWrapper: styled.div`
     padding-right: ${pxToRem(10)};
     height: ${pxToRem(25)};
   `,
@@ -37,7 +39,7 @@ export const Switch = {
     width: ${pxToRem(48)};
     height: ${pxToRem(25)};
     border-radius: ${pxToRem(125)};
-    background-color: var(--gray);
+    background-color: var(--gray-400);
     transition: opacity 0.2s ease, transform 0.2s ease,
       background-color 0.2s ease;
 
@@ -48,13 +50,11 @@ export const Switch = {
     }
 
     &:checked + ${SwitchButton} {
-      left: ${pxToRem(26)};
+      transform: translate(24px);
     }
   `,
   SwitchName: styled.p`
     font-size: var(--text-s);
     color: var(--gray-800);
-
-    cursor: pointer;
   `,
 };

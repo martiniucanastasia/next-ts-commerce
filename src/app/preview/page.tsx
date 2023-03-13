@@ -9,7 +9,7 @@ export default function Preview() {
 
   return (
     <>
-      <Switch isChecked={isChecked} setIsChecked={setIsChecked} message="Switch label"/>
+      <Switch isChecked={isChecked} setIsChecked={setIsChecked} label="Switch label"/>
     </>
   );
 }

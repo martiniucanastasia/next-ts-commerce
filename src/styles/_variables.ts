@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 
 const colors = css`
-  --gray: #bdbdbd;
   --gray-100: #f7fafc;
   --gray-200: #eff2f4;
   --gray-300: #dee2e7;
