@@ -12,7 +12,6 @@ export const VerticalMenuStyles = {
     color: var(--gray-600);
 
     font-size: var(--text-s);
-    font-weight: 400;
 
     transition: background-color 0.3s linear;
     cursor: pointer;
@@ -20,7 +19,6 @@ export const VerticalMenuStyles = {
     :hover {
       background-color: var(--primary-100);
       color: var(--gray-700);
-      font-weight: 500;
     }
   `,
 };
