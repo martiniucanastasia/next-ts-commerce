@@ -23,6 +23,7 @@ export default function Preview() {
       <br />
       <Input
         placeholder="Type"
+        visual="left"
         button={
           <Button visual="right" variant="fifth">
             Hello
@@ -33,6 +34,7 @@ export default function Preview() {
       <br />
       <Input
         placeholder="Type"
+        visual="left"
         button={
           <Button visual="right" variant="quaternary">
             <ArrowSvg />
@@ -43,6 +45,7 @@ export default function Preview() {
       <br />
       <Input
         placeholder="Type"
+        visual="left"
         button={
           <Button visual="right" variant="primary" available={false}>
             Agree
@@ -58,16 +61,19 @@ export default function Preview() {
 
       <br />
       <Input
-        placeholder="Click on me"
+        placeholder="Type"
         label="Input with Label and Top Hint"
-        hintTop="Hint the text top"
+        hint={{ message: "Hint text for info", position: "top" }}
       />
 
       <br />
       <Input
-        placeholder="Click on me"
+        placeholder="Type"
         label="Input with Label and Bottom Hint"
-        hintBottom="Hint the text bottom"
+        hint={{
+          message: "Hint text for info",
+          position: "bottom",
+        }}
       />
 
       <br />

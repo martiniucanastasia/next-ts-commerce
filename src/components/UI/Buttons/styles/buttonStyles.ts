@@ -39,6 +39,7 @@ const getSizeStyles = ({
     large: css`
       gap: ${pxToRem(20)};
       padding: ${pxToRem(15)} ${pxToRem(20)};
+      border-radius: ${pxToRem(8)};
       min-height: ${pxToRem(54)};
       font-size: var(--text-m);
 
@@ -64,7 +65,7 @@ export const getVariantStyles = ({
         fill: currentColor;
       }
 
-      &:hover {
+      :hover {
         background-image: linear-gradient(
           to right,
           rgba(0, 103, 255, 1) 0%,
@@ -116,22 +117,22 @@ export const getGroupStyles = ({
 }: ThemedStyledProps<Pick<ButtonProps, "visual">, DefaultTheme>) => {
   const mapper: Record<Visual, FlattenSimpleInterpolation> = {
     left: css`
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: ${pxToRem(8)};
+      border-bottom-left-radius: ${pxToRem(8)};
     `,
     center: css`
       border-radius: 0;
     `,
     right: css`
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-top-right-radius: ${pxToRem(8)};
+      border-bottom-right-radius: ${pxToRem(8)};
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     `,
     standart: css`
-      border-radius: ${pxToRem(8)};
+      border-radius: ${pxToRem(6)};
     `,
   };
 
@@ -147,6 +148,11 @@ const getAvailableStyles = ({
       background-color: var(--gray-200);
       border: 1px solid var(--gray-300);
       color: var(--gray-500);
+
+
+      :hover {
+        background-image: none;
+      }
 
       svg{
         fill: var(--gray-500);
