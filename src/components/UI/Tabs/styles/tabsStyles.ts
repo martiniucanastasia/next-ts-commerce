@@ -10,7 +10,6 @@ import styled, {
 export const getVariantStyles = ({
   variant = "primary",
 }: ThemedStyledProps<Pick<TabsProps, "variant">, DefaultTheme>) => {
-  // only one resolution which I found - "FlattenInterpolation<any>" and for css "<{ disabled: boolean }>" to make it without error
   const mapper: Record<Variant, FlattenInterpolation<any>> = {
     primary: css<{ disabled: boolean }>`
       border-radius: ${pxToRem(6)};
@@ -27,16 +26,49 @@ export const getVariantStyles = ({
       background: none;
       border-bottom: 2px solid
         ${({ disabled }) => (disabled ? "var(--primary)" : "var(--gray-300)")};
+
+      :first-child {
+        margin-left: 15px;
+      }
+      :last-child {
+        margin-right: 15px;
+      }
     `,
   };
 
   return mapper[variant];
 };
+const getTabsWrapper = ({
+  variant,
+}: ThemedStyledProps<Pick<TabsProps, "variant">, DefaultTheme>) => {
+  if (variant === "secondary") {
+    return css`
+      background: linear-gradient(
+          to right,
+          var(--gray-300) 100%,
+          transparent 0%
+        )
+        bottom;
+
+      background-repeat: no-repeat;
+      background-size: 100% 2px;
+    `;
+  }
+};
 
 export const tabsStyles = {
-  TabWrapper: styled.div`
+  TabWrapper: styled.div<Pick<TabsProps, "variant">>`
     display: flex;
-    flex-direction: row;
+    margin-bottom: ${pxToRem(20)};
+
+    overflow-x: scroll;
+
+    ::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+
+    ${getTabsWrapper}
   `,
 
   TabButton: styled.button<Pick<TabsProps, "variant">>`
@@ -51,6 +83,8 @@ export const tabsStyles = {
 
     ${getVariantStyles}
   `,
-  
-  TabContent: styled.div``,
+
+  TabContent: styled.div`
+    padding-left: ${pxToRem(20)};
+  `,
 };

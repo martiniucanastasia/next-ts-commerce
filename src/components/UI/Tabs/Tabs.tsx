@@ -15,7 +15,7 @@ export const Tabs = ({ categories, variant }: TabsProps) => {
     <>
       {categories ? (
         <>
-          <S.TabWrapper>
+          <S.TabWrapper variant={variant}>
             {categories.map((tab) => {
               return (
                 <S.TabButton
@@ -30,13 +30,10 @@ export const Tabs = ({ categories, variant }: TabsProps) => {
               );
             })}
           </S.TabWrapper>
-          {categories.map((tab) => {
-            return (
-              <S.TabContent key={tab.id}>
-                {activeId === `${tab.id}` && <p>{tab.name}</p>}
-              </S.TabContent>
-            );
-          })}
+          <S.TabContent>{activeId === "0" && <p>0</p>}</S.TabContent>
+          <S.TabContent>{activeId === "1" && <p>1</p>}</S.TabContent>
+          <S.TabContent>{activeId === "2" && <p>2</p>}</S.TabContent>
+          <S.TabContent>{activeId === "3" && <p>3</p>}</S.TabContent>
         </>
       ) : null}
     </>
