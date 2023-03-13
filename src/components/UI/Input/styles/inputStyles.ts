@@ -36,13 +36,13 @@ export const inputStyles = {
     border-radius: ${pxToRem(6)};
     border: 1px solid var(--gray-300);
 
+    :focus {
+      outline-color: var(--primary);
+    }
+
     ::placeholder {
       color: var(--gray-500);
       font-family: var(--font-primary);
-    }
-
-    :focus {
-      outline-color: var(--primary);
     }
 
     ::-webkit-resizer {
@@ -50,6 +50,8 @@ export const inputStyles = {
       border-bottom-right-radius: ${pxToRem(5)};
       border-style: solid;
       border-color: transparent var(--gray-300) var(--gray-300) transparent;
+
+      cursor: s-resize;
     }
   `,
 

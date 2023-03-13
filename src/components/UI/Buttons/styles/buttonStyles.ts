@@ -138,8 +138,24 @@ export const getGroupStyles = ({
   return mapper[visual];
 };
 
+const getAvailableStyles = ({
+  available,
+}: ThemedStyledProps<Pick<ButtonProps, "available">, DefaultTheme>) => {
+  if (available === false)
+    return css`
+      background-image: none;
+      background-color: var(--gray-200);
+      border: 1px solid var(--gray-300);
+      color: var(--gray-500);
+
+      svg{
+        fill: var(--gray-500);
+      }
+    `;
+};
+
 export const buttonStyled = {
-  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual">>`
+  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual" | "available">>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,5 +174,6 @@ export const buttonStyled = {
     ${getSizeStyles}
     ${getVariantStyles}
     ${getGroupStyles}
+    ${getAvailableStyles}
   `,
 };

@@ -3,8 +3,8 @@ import { ButtonProps } from "../Buttons/types";
 import { inputStyles as S } from "./styles/inputStyles";
 
 export interface InputProps {
-  placeholder: string;
   isTextarea?: boolean;
+  placeholder: string;
   button?: ReactElement<ButtonProps>;
   label?: string;
   hintTop?: string;
@@ -12,8 +12,8 @@ export interface InputProps {
 }
 
 export const Input = ({
-  placeholder,
   isTextarea = false,
+  placeholder,
   button,
   label,
   hintTop,
