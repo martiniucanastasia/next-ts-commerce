@@ -25,7 +25,6 @@ export default function Preview() {
         return (
           <div key={item.id}>
             <Checkbox
-              label="Label" // or just remove label
               value={item.name}
               isChecked={item.checked}
               onChange={() => handleChange(item.id)}

@@ -1,37 +1,34 @@
-import {
-  checkboxStyles as S,
-  checkboxStylesMask as M,
-} from "./styles/checkboxStyles";
+import { checkboxStyles as S } from "./styles/checkboxStyles";
 import CheckboxArrowSvg from "@/assets/svg/icon/control/checkbox_arrow.svg";
 
 export interface CheckboxProps {
-  label?: string;
+  groupLabel?: string;
   value: string;
   isChecked: boolean;
   onChange: () => void;
 }
 
 export const Checkbox = ({
-  label,
+  groupLabel,
   value,
   isChecked,
   onChange,
 }: CheckboxProps) => {
   return (
     <>
-      <S.CheckboxLabel>{label}</S.CheckboxLabel>
+      {groupLabel && <S.CheckboxLabel>{groupLabel}</S.CheckboxLabel>}
       <S.CheckboxWrapper>
         <S.Label>
-          <S.Input
+          <S.Checkbox
             type="checkbox"
             name={value}
             onChange={onChange}
             checked={isChecked}
           />
           {value}
-          <M.CheckboxMask isChecked={isChecked}>
+          <S.CheckboxMask>
             <CheckboxArrowSvg />
-          </M.CheckboxMask>
+          </S.CheckboxMask>
         </S.Label>
       </S.CheckboxWrapper>
     </>
