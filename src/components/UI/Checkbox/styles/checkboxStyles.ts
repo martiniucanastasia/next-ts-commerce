@@ -11,7 +11,7 @@ export const CheckboxMask = styled.div`
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
 
-  padding: ${pxToRem(5)} ${pxToRem(3)};
+  margin: 0 ${pxToRem(13)} 0 0;
   border-radius: ${pxToRem(5)};
 
   border: 2px solid var(--gray-400);
@@ -38,17 +38,15 @@ export const checkboxStyles = {
     cursor: pointer;
   `,
   Checkbox: styled.input.attrs({ type: "checkbox" })`
-    margin-right: ${pxToRem(15)};
-
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
 
-    appearance: none;
+    margin: 0 ${pxToRem(13)} 0 0;
+    opacity: 0;
 
     &:checked + ${CheckboxMask} {
       background-color: var(--primary);
-      border-radius: ${pxToRem(5)};
-      border: none;
+      border: 2px solid var(--primary);
     }
   `,
   CheckboxMask,
