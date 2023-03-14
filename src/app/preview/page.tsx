@@ -2,7 +2,7 @@
 
 //Preview components
 import { Checkbox } from "@/components/UI/Checkbox/Checkbox";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 export default function Preview() {
   // Just for presentation reasons
