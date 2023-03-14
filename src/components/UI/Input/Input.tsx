@@ -9,8 +9,8 @@ export interface InputProps {
   label?: string;
   visual?: string;
   hint?: {
-    message?: string;
-    position: string;
+    message: string;
+    position?: string;
   };
 }
 
@@ -20,7 +20,7 @@ export const Input = ({
   button,
   label,
   visual,
-  hint = { position: "bottom" },
+  hint = { message: "", position: "bottom" },
 }: InputProps) => {
   return (
     <>
