@@ -1,11 +1,6 @@
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { ChangeEvent } from "react";
 import { SwitchButton, Switch as S } from "./styles/switchStyles";
-
-interface SwitchProps {
-  label: string;
-  isChecked: boolean;
-  setIsChecked: Dispatch<SetStateAction<boolean>>;
-}
+import { SwitchProps } from "./types";
 
 export const Switch = ({ label, isChecked, setIsChecked }: SwitchProps) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -18,7 +13,7 @@ export const Switch = ({ label, isChecked, setIsChecked }: SwitchProps) => {
         <S.Input type="checkbox" checked={isChecked} onChange={handleChange} />
         <SwitchButton />
       </S.SwitchWrapper>
-        <S.SwitchName>{label}</S.SwitchName>
+      <S.SwitchName>{label}</S.SwitchName>
     </S.Label>
   );
 };
