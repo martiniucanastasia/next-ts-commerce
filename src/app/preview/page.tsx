@@ -40,10 +40,11 @@ export default function Preview() {
             <Radiobox
               groupLabel="Label"
               label={item.label}
-              isChecked={color === item.label}
+              value={item.name}
+              isChecked={color === item.name}
               onChange={handleChange}
             />
-          </div>  
+          </div>
         );
       })}
     </div>

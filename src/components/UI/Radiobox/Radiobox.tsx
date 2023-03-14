@@ -4,17 +4,19 @@ import { ChangeEvent } from "react";
 export interface RadioboxProps {
   groupLabel?: string;
   label: string;
+  value: string;
   isChecked: boolean;
   onChange: (value: string) => void;
 }
 export const Radiobox = ({
   groupLabel,
   label,
+  value,
   isChecked,
   onChange,
 }: RadioboxProps) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange(label);
+    onChange(value);
   };
 
   return (
