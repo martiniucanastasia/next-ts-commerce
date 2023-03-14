@@ -1,5 +1,4 @@
 import Select from "react-select";
-import { useId } from "react";
 import { selectStyles } from "./styles/selectStyles";
 import { OptionType, SelectProps } from "./types";
 
@@ -14,7 +13,7 @@ export const SelectComponent = ({
 
   return (
     <Select<OptionType<string> | null>
-      instanceId={useId()}
+      instanceId="select-box-id"
       onChange={handleChange}
       options={options}
       placeholder={placeholder}
