@@ -420,5 +420,23 @@
             "verified" : true,
             "image": "/src/assets/png/other/10.jpg"
         }
+    ],
+    "categories": [
+        {
+            "id": 0,
+            "name": "Clothes"
+        },
+        {
+            "id": 1,
+            "name": "Tech"
+        },
+        {
+            "id": 2,
+            "name": "Furniture"
+        },
+        {
+            "id": 3,
+            "name": "Home"
+        }
     ]
 }
