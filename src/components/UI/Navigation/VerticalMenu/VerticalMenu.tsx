@@ -1,7 +1,15 @@
 "use client";
 
 import { VerticalMenuStyles as S } from "./styles/verticalMenuStyles";
-import { VerticalMenuProps } from "./types";
+
+export interface VerticalMenuProps {
+  categories: [
+    {
+      id: number;
+      name: string;
+    }
+  ];
+}
 
 export const VerticalMenu = ({ categories }: VerticalMenuProps) => {
   return (
