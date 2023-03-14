@@ -1,13 +1,7 @@
 import { radioboxStyles as S } from "./styles/radioboxStyles";
 import { ChangeEvent } from "react";
+import { RadioboxProps } from "./types";
 
-export interface RadioboxProps {
-  groupLabel?: string;
-  label: string;
-  value: string;
-  isChecked: boolean;
-  onChange: (value: string) => void;
-}
 export const Radiobox = ({
   groupLabel,
   label,
