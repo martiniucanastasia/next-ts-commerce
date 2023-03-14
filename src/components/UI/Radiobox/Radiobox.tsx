@@ -2,24 +2,24 @@ import { radioboxStyles as S } from "./styles/radioboxStyles";
 import { ChangeEvent } from "react";
 
 export interface RadioboxProps {
-  label?: string;
-  valueName: string;
+  groupLabel?: string;
+  label: string;
   isChecked: boolean;
   onChange: (value: string) => void;
 }
 export const Radiobox = ({
+  groupLabel,
   label,
-  valueName,
   isChecked,
   onChange,
 }: RadioboxProps) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onChange(valueName);
+    onChange(label);
   };
 
   return (
     <>
-      <S.RadioLabel>{label}</S.RadioLabel>
+      {groupLabel && <S.GroupLabel>{groupLabel}</S.GroupLabel>}
       <S.RadioWrapper>
         <S.Label>
           <S.Radio
@@ -28,7 +28,7 @@ export const Radiobox = ({
             onChange={handleChange}
             checked={isChecked}
           />
-          {valueName}
+          {label}
           <S.RadioMask />
         </S.Label>
       </S.RadioWrapper>

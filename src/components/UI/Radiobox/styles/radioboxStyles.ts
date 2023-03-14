@@ -6,10 +6,25 @@ const RadioMask = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: ${pxToRem(18)};
   height: ${pxToRem(18)};
+
   border-radius: ${pxToRem(50)};
   border: 2px solid var(--gray-400);
+`;
+
+const GroupLabel = styled.label`
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  user-select: none;
+
+  font-family: var(--font-primary);
+  color: var(--gray-700);
+  font-size: var(--text-s);
+
+  cursor: pointer;
 `;
 
 export const radioboxStyles = {
@@ -25,6 +40,7 @@ export const radioboxStyles = {
     position: relative;
     align-items: center;
     user-select: none;
+
     font-family: var(--font-primary);
     color: var(--gray-700);
     font-size: var(--text-s);
@@ -33,10 +49,13 @@ export const radioboxStyles = {
   `,
   Radio: styled.input.attrs({ type: "radio" })`
     appearance: none;
+
     width: ${pxToRem(18)};
     height: ${pxToRem(18)};
+
     border-radius: ${pxToRem(50)};
     transform: translateY(-0.075em);
+    
     margin: 0 ${pxToRem(15)} 0 0;
 
     &:checked + ${RadioMask} {
@@ -46,4 +65,5 @@ export const radioboxStyles = {
     }
   `,
   RadioMask,
+  GroupLabel,
 };
