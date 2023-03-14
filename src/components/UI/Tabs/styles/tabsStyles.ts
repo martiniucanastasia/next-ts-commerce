@@ -28,10 +28,10 @@ export const getVariantStyles = ({
         ${({ disabled }) => (disabled ? "var(--primary)" : "var(--gray-300)")};
 
       :first-child {
-        margin-left: 15px;
+        margin-left: ${pxToRem(15)};
       }
       :last-child {
-        margin-right: 15px;
+        margin-right: ${pxToRem(15)};
       }
     `,
   };
