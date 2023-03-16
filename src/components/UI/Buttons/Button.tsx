@@ -7,8 +7,15 @@ export const Button = ({
   visual,
   onClick,
   children,
+  available = true,
 }: ButtonProps) => (
-  <S.Button variant={variant} size={size} onClick={onClick} visual={visual}>
+  <S.Button
+    size={size}
+    variant={variant}
+    visual={visual}
+    onClick={onClick}
+    available={available}
+  >
     {children}
   </S.Button>
 );
