@@ -5,7 +5,7 @@ import styled, {
   ThemedStyledProps,
 } from "styled-components";
 import { pxToRem } from "@/styles/_common";
-import { InputProps } from "../Input";
+import { InputProps } from "../types";
 
 export const getGroupStyles = ({
   visual = "",

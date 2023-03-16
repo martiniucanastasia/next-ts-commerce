@@ -1,18 +1,5 @@
-import { ReactElement } from "react";
-import { ButtonProps } from "../Buttons/types";
 import { inputStyles as S } from "./styles/inputStyles";
-
-export interface InputProps {
-  isTextarea?: boolean;
-  placeholder: string;
-  button?: ReactElement<ButtonProps>;
-  label?: string;
-  visual?: string;
-  hint?: {
-    message: string;
-    position?: string;
-  };
-}
+import { InputProps } from "./types";
 
 export const Input = ({
   isTextarea = false,
