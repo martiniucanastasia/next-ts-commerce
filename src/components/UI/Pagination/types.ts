@@ -1,14 +1,11 @@
 import { OptionType } from "../Select/types";
 
 export interface PaginationProps {
-    items: number;
-    perPage: number;
-    options?: OptionType<number>[];
-    pageNumber?: number;
-    currentPage: number;
-    isSelect?: boolean;
-    onPageChange: (page: number) => void;
-    onPerPageChange: (obj: OptionType<number> | null) => void;
-    valuesFromOptions?: number;
-  }
-  
+  products: number;
+  currentPage: number;
+  perPage: number;
+  pageNumber?: number;
+  withSelect?: boolean;
+  triggerPageChange: (page: number) => void;
+  changePageCount: (obj: OptionType<number> | null) => void;
+}

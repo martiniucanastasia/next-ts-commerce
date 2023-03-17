@@ -10,7 +10,7 @@ import { PaginationProps } from "./types";
 import ArrowLeft from "../../../assets/svg/icon/control/chevron_left.svg";
 import ArrowRight from "../../../assets/svg/icon/control/chevron_right.svg";
 
-export const options: OptionType<number>[] = [
+export const SELECT_PAGE_RANGES: OptionType<number>[] = [
   { value: 10, label: "Show 10" },
   { value: 15, label: "Show 15" },
   { value: 20, label: "Show 20" },
@@ -19,20 +19,22 @@ export const options: OptionType<number>[] = [
 ];
 
 export const Pagination = ({
-  items,
-  perPage,
-  currentPage,
-  isSelect = false,
-  onPageChange,
-  onPerPageChange,
+  products,
+  perPage = 10,
+  currentPage = 1,
+  withSelect = false,
+  triggerPageChange,
+  changePageCount,
 }: PaginationProps) => {
-
-  const totalPages = Math.ceil(items / perPage);
+  const totalPages = Math.ceil(products / perPage);
   let pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-  const paginationLink = (page: number, active: boolean) => {
+  const renderPaginationLink = (page: number, isActive: boolean) => {
     return (
-      <PaginationLink active={active} onClick={() => onPageChange(page)}>
+      <PaginationLink
+        isActive={isActive}
+        onClick={() => triggerPageChange(page)}
+      >
         {page}
       </PaginationLink>
     );
@@ -41,22 +43,21 @@ export const Pagination = ({
   return (
     <>
       <S.PaginationWrapper>
-
         <S.SelectWrapper>
-          {isSelect && (
+          {withSelect && (
             <SelectComponent<number>
               placeholder={`Show ${perPage}`}
-              options={options}
+              options={SELECT_PAGE_RANGES}
               onChange={(obj) => {
-                onPerPageChange(obj);
+                changePageCount(obj);
               }}
             />
           )}
         </S.SelectWrapper>
 
         <S.Button
-          onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
-          disabled={currentPage === 1}
+          onClick={() => currentPage > 1 && triggerPageChange(currentPage - 1)}
+          disabled={currentPage === 1 ? true : false}
           variant="secondary"
           visual="left"
         >
@@ -67,9 +68,9 @@ export const Pagination = ({
           return (
             <div key={page}>
               {page === currentPage ? (
-                <>{paginationLink(page, true)}</>
+                <>{renderPaginationLink(page, page === currentPage)}</>
               ) : (
-                <>{paginationLink(page, false)}</>
+                <>{renderPaginationLink(page, page === currentPage)}</>
               )}
             </div>
           );
@@ -77,15 +78,14 @@ export const Pagination = ({
 
         <S.Button
           onClick={() =>
-            currentPage < totalPages && onPageChange(currentPage + 1)
+            currentPage < totalPages && triggerPageChange(currentPage + 1)
           }
-          disabled={currentPage >= totalPages}
+          disabled={currentPage >= totalPages ? true : false}
           variant="secondary"
           visual="right"
         >
           <ArrowRight />
         </S.Button>
-
       </S.PaginationWrapper>
     </>
   );

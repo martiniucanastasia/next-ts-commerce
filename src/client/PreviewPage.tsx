@@ -3,27 +3,31 @@
 import { Pagination } from "@/components/UI/Pagination/Pagination";
 import { Product } from "@/types/types";
 import { useEffect, useState } from "react";
-import { options } from "../components/UI/Pagination/Pagination";
-import { getProducts } from "@/helpers/getProducts";
+import { getProductsPerPage } from "@/helpers/getProducts";
 import { OptionType } from "@/components/UI/Select/types";
+import { SELECT_PAGE_RANGES } from "../components/UI/Pagination/Pagination";
 
 export const PreviewPage = ({ products }: { products: Product[] }) => {
   const [currentPage, setCurrentPage] = useState({ value: 1 });
-  const [perPage, setPerPage] = useState(options[0].value);
+  const [perPage, setPerPage] = useState(SELECT_PAGE_RANGES[0].value);
   const [paginatedProducts, setPaginatedProducts] = useState([]);
 
   useEffect(() => {
-    getProducts(`_page=${currentPage.value}&_limit=${perPage}`).then((resp) => {
-      setPaginatedProducts(resp);
-    });
+    getProductsPerPage(currentPage, perPage)
+      .then((response) => {
+        setPaginatedProducts(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, [perPage, currentPage]);
 
-  const onPageChange = async (page: number) => {
+  const triggerPageChange = (page: number) => {
     setCurrentPage({ value: page });
   };
 
-  const perPageHandler = (obj: OptionType<number> | null) => {
-    setPerPage(obj?.value || options[0].value);
+  const changePageCount = (obj: OptionType<number> | null) => {
+    setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
     setCurrentPage({ value: 1 });
   };
 
@@ -42,12 +46,12 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
       <br />
 
       <Pagination
-        isSelect={true} // or false to use Pagination component without Select
-        items={products.length}
+        products={products.length}
         currentPage={currentPage.value}
         perPage={perPage}
-        onPageChange={onPageChange}
-        onPerPageChange={perPageHandler}
+        withSelect={true}
+        triggerPageChange={triggerPageChange}
+        changePageCount={changePageCount}
       />
     </div>
   );
