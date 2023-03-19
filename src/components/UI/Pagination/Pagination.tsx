@@ -24,7 +24,7 @@ export const Pagination = ({
   currentPage = 1,
   withSelect = false,
   setCurrentPage,
-  changePageCount,
+  setPerPage,
 }: PaginationProps) => {
   const totalPages = Math.ceil(products / perPage);
   let pages = Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -49,7 +49,8 @@ export const Pagination = ({
               placeholder={`Show ${perPage}`}
               options={SELECT_PAGE_RANGES}
               onChange={(obj) => {
-                changePageCount(obj);
+                setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
+                setCurrentPage({ value: 1 });
               }}
             />
           )}

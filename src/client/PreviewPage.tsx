@@ -4,7 +4,6 @@ import { Pagination } from "@/components/UI/Pagination/Pagination";
 import { Product } from "@/types/types";
 import { useEffect, useState } from "react";
 import { getProductsPerPage } from "@/helpers/getProducts";
-import { OptionType } from "@/components/UI/Select/types";
 import { SELECT_PAGE_RANGES } from "../components/UI/Pagination/Pagination";
 
 export const PreviewPage = ({ products }: { products: Product[] }) => {
@@ -21,11 +20,6 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
         console.error(error);
       });
   }, [perPage, currentPage]);
-
-  const changePageCount = (obj: OptionType<number> | null) => {
-    setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
-    setCurrentPage({ value: 1 });
-  };
 
   return (
     <div>
@@ -46,7 +40,7 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
         perPage={perPage}
         withSelect={true}
         setCurrentPage={setCurrentPage}
-        changePageCount={changePageCount}
+        setPerPage={setPerPage}
       />
     </div>
   );
