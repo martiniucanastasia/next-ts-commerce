@@ -35,7 +35,7 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
       <br />
 
       <Pagination
-        products={products.length}
+        productsLength={products.length}
         currentPage={currentPage.value}
         perPage={perPage}
         withSelect={true}

@@ -19,14 +19,14 @@ export const SELECT_PAGE_RANGES: OptionType<number>[] = [
 ];
 
 export const Pagination = ({
-  products,
+  productsLength,
   perPage = 10,
   currentPage = 1,
   withSelect = false,
   setCurrentPage,
   setPerPage,
 }: PaginationProps) => {
-  const totalPages = Math.ceil(products / perPage);
+  const totalPages = Math.ceil(productsLength / perPage);
   let pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   const renderPaginationLink = (page: number, isActive: boolean) => {
@@ -57,9 +57,9 @@ export const Pagination = ({
         </S.SelectWrapper>
 
         <S.Button
-          onClick={() =>
-            currentPage > 1 && setCurrentPage({ value: currentPage - 1 })
-          }
+          onClick={() => {
+            currentPage > 1 && setCurrentPage({ value: currentPage - 1 });
+          }}
           disabled={currentPage === 1 ? true : false}
           variant="secondary"
           visual="left"
@@ -80,10 +80,10 @@ export const Pagination = ({
         })}
 
         <S.Button
-          onClick={() =>
+          onClick={() => {
             currentPage < totalPages &&
-            setCurrentPage({ value: currentPage + 1 })
-          }
+              setCurrentPage({ value: currentPage + 1 });
+          }}
           disabled={currentPage >= totalPages ? true : false}
           variant="secondary"
           visual="right"

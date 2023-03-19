@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 export interface PaginationProps {
-  products: number;
+  productsLength: number;
   currentPage: number;
   perPage: number;
   pageNumber?: number;
