@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { OptionType } from "../Select/types";
 
 export interface PaginationProps {
@@ -6,6 +7,6 @@ export interface PaginationProps {
   perPage: number;
   pageNumber?: number;
   withSelect?: boolean;
-  triggerPageChange: (page: number) => void;
+  setCurrentPage: Dispatch<SetStateAction<{ value: number }>>;
   changePageCount: (obj: OptionType<number> | null) => void;
 }

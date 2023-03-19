@@ -23,7 +23,7 @@ export const Pagination = ({
   perPage = 10,
   currentPage = 1,
   withSelect = false,
-  triggerPageChange,
+  setCurrentPage,
   changePageCount,
 }: PaginationProps) => {
   const totalPages = Math.ceil(products / perPage);
@@ -33,7 +33,7 @@ export const Pagination = ({
     return (
       <PaginationLink
         isActive={isActive}
-        onClick={() => triggerPageChange(page)}
+        onClick={() => setCurrentPage({ value: page })}
       >
         {page}
       </PaginationLink>
@@ -56,7 +56,9 @@ export const Pagination = ({
         </S.SelectWrapper>
 
         <S.Button
-          onClick={() => currentPage > 1 && triggerPageChange(currentPage - 1)}
+          onClick={() =>
+            currentPage > 1 && setCurrentPage({ value: currentPage - 1 })
+          }
           disabled={currentPage === 1 ? true : false}
           variant="secondary"
           visual="left"
@@ -78,7 +80,8 @@ export const Pagination = ({
 
         <S.Button
           onClick={() =>
-            currentPage < totalPages && triggerPageChange(currentPage + 1)
+            currentPage < totalPages &&
+            setCurrentPage({ value: currentPage + 1 })
           }
           disabled={currentPage >= totalPages ? true : false}
           variant="secondary"

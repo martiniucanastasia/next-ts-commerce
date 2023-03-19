@@ -22,10 +22,6 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
       });
   }, [perPage, currentPage]);
 
-  const triggerPageChange = (page: number) => {
-    setCurrentPage({ value: page });
-  };
-
   const changePageCount = (obj: OptionType<number> | null) => {
     setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
     setCurrentPage({ value: 1 });
@@ -34,7 +30,6 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
   return (
     <div>
       <h2 style={{ paddingBottom: "20px" }}>Preview Page</h2>
-
       {paginatedProducts.map((product: any) => {
         return (
           <div key={product.id} style={{ paddingBottom: "20px" }}>
@@ -50,7 +45,7 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
         currentPage={currentPage.value}
         perPage={perPage}
         withSelect={true}
-        triggerPageChange={triggerPageChange}
+        setCurrentPage={setCurrentPage}
         changePageCount={changePageCount}
       />
     </div>
