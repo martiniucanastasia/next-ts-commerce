@@ -43,6 +43,7 @@ export const footerStyled = {
   BrandInfo: styled.span`
     padding: ${pxToRem(17)} 0;
     color: var(--gray-600);
+    line-height: ${pxToRem(24)};
   `,
 
   SocialLinks: styled.div`
