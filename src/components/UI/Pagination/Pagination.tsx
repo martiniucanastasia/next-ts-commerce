@@ -39,7 +39,7 @@ export const Pagination = ({
 
   useEffect(() => {
     onChange(currentPage, perPage);
-  }, [perPage, currentPage, onChange]);
+  }, [perPage, currentPage]);
 
   const renderPaginationLink = (page: number, isActive: boolean) => {
     return (
