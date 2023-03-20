@@ -9,6 +9,7 @@ import { PaginationProps } from "./types";
 
 import ArrowLeft from "../../../assets/svg/icon/control/chevron_left.svg";
 import ArrowRight from "../../../assets/svg/icon/control/chevron_right.svg";
+import { useEffect, useState } from "react";
 
 export const SELECT_PAGE_RANGES: OptionType<number>[] = [
   { value: 10, label: "Show 10" },
@@ -19,15 +20,26 @@ export const SELECT_PAGE_RANGES: OptionType<number>[] = [
 ];
 
 export const Pagination = ({
-  productsLength,
-  perPage = 10,
-  currentPage = 1,
   withSelect = false,
-  setCurrentPage,
-  setPerPage,
+  productsLength,
+  onChange,
 }: PaginationProps) => {
+  const [currentPage, setCurrentPage] = useState({ value: 1 });
+  const [perPage, setPerPage] = useState(SELECT_PAGE_RANGES[0].value);
+
   const totalPages = Math.ceil(productsLength / perPage);
   let pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  const handlePaginationChange = (
+    currentPage: { value: number },
+    perPage: number
+  ) => {
+    onChange(currentPage, perPage);
+  };
+
+  useEffect(() => {
+    onChange(currentPage, perPage);
+  }, [perPage, currentPage, onChange]);
 
   const renderPaginationLink = (page: number, isActive: boolean) => {
     return (
@@ -51,6 +63,7 @@ export const Pagination = ({
               onChange={(obj) => {
                 setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
                 setCurrentPage({ value: 1 });
+                handlePaginationChange(currentPage, perPage);
               }}
             />
           )}
@@ -58,9 +71,10 @@ export const Pagination = ({
 
         <S.Button
           onClick={() => {
-            currentPage > 1 && setCurrentPage({ value: currentPage - 1 });
+            currentPage.value > 1 &&
+              setCurrentPage({ value: currentPage.value - 1 });
           }}
-          disabled={currentPage === 1 ? true : false}
+          disabled={currentPage.value === 1 ? true : false}
           variant="secondary"
           visual="left"
         >
@@ -70,10 +84,10 @@ export const Pagination = ({
         {pages.map((page) => {
           return (
             <div key={page}>
-              {page === currentPage ? (
-                <>{renderPaginationLink(page, page === currentPage)}</>
+              {page === currentPage.value ? (
+                <>{renderPaginationLink(page, page === currentPage.value)}</>
               ) : (
-                <>{renderPaginationLink(page, page === currentPage)}</>
+                <>{renderPaginationLink(page, page === currentPage.value)}</>
               )}
             </div>
           );
@@ -81,10 +95,10 @@ export const Pagination = ({
 
         <S.Button
           onClick={() => {
-            currentPage < totalPages &&
-              setCurrentPage({ value: currentPage + 1 });
+            currentPage.value < totalPages &&
+              setCurrentPage({ value: currentPage.value + 1 });
           }}
-          disabled={currentPage >= totalPages ? true : false}
+          disabled={currentPage.value >= totalPages ? true : false}
           variant="secondary"
           visual="right"
         >
