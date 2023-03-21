@@ -14,6 +14,8 @@ export interface ButtonProps {
   variant?: Variant;
   visual?: Visual;
   available?: boolean;
+  disabled?: boolean;
+  className?: string;
   onClick?: (() => void) | MouseEventHandler<HTMLButtonElement>;
   children?: React.ReactNode;
 }

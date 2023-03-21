@@ -5,6 +5,8 @@ export const Button = ({
   size = "normal",
   variant = "primary",
   visual,
+  disabled,
+  className,
   onClick,
   children,
   available = true,
@@ -15,6 +17,8 @@ export const Button = ({
     visual={visual}
     onClick={onClick}
     available={available}
+    disabled={disabled}
+    className={className}
   >
     {children}
   </S.Button>
