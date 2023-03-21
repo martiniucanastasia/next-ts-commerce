@@ -2,23 +2,26 @@ import Select from "react-select";
 import { selectStyles } from "./styles/selectStyles";
 import { OptionType, SelectProps } from "./types";
 
-export const SelectComponent = ({
+export function SelectComponent<T>({
   options,
   placeholder,
+  isSearchable = true,
+  isClearable = true,
   onChange,
-}: SelectProps) => {
-  const handleChange = (selectedOption: OptionType<string> | null) => {
+}: SelectProps<T>) {
+  const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
   };
 
   return (
-    <Select<OptionType<string> | null>
+    <Select<OptionType<T> | null>
       instanceId="select-box-id"
       onChange={handleChange}
       options={options}
       placeholder={placeholder}
       styles={selectStyles}
-      isClearable={true}
+      isClearable={isClearable}
+      isSearchable={isSearchable}
     />
   );
-};
+}

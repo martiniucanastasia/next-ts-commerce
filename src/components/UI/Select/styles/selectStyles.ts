@@ -1,9 +1,10 @@
 import { StylesConfig } from "react-select";
 import { OptionType } from "../types";
 
-export const selectStyles: StylesConfig<OptionType<string> | null, boolean> = {
+// @ts-expect-error
+export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
   control: (base, state) => {
-    return {
+    return {     
       ...base,
       borderColor: state.isFocused ? "var(--primary)" : "var(--gray-300)",
       borderRadius: 6,
