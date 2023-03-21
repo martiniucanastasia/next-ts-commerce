@@ -31,12 +31,14 @@ export const footerStyled = {
   BrandWrapper: styled.div`
     display: flex;
     flex-direction: column;
-    width: 25%;
+    padding-right: ${pxToRem(20)};
+    width: 30%;
 
     @media ${device.mobile} {
       width: 100%;
       align-items: center;
       font-size: var(--text-m);
+      padding: 0;
     }
   `,
 
@@ -48,6 +50,7 @@ export const footerStyled = {
 
   SocialLinks: styled.div`
     display: flex;
+    flex-wrap: wrap;
     line-height: 0;
 
     color: var(--gray-400);
@@ -60,27 +63,30 @@ export const footerStyled = {
 
   InfoWrapper: styled.div`
     display: flex;
-
-    gap: ${pxToRem(60)};
+    width: 60%;
 
     @media ${device.mobile} {
       text-align: center;
       padding: ${pxToRem(20)} 0 ${pxToRem(40)} 0;
-      gap: ${pxToRem(40)};
+      width: 100%;
     }
 
     @media ${device.mobileXS} {
-      text-align: center;
-      justify-content: center;
-
       flex-wrap: wrap;
-      max-width: 50%;
+      max-width: 60%;
+      padding-bottom: 0;
     }
   `,
 
-  ColimnsWrapper: styled.ul``,
+  LinksWrapper: styled.ul`
+    display: flex;
+    flex-direction: column;
+
+    gap: ${pxToRem(7)};
+  `,
 
   ColumnsName: styled.h4`
+    flex-wrap: wrap;
     color: var(--gray-700);
     font-weight: 500;
     font-size: var(--text-s);
@@ -89,29 +95,36 @@ export const footerStyled = {
 
     @media ${device.mobile} {
       font-size: var(--text-m);
+      padding-bottom: ${pxToRem(15)};
     }
   `,
 
-  LinksWrapper: styled.div`
-    display: flex;
-    flex-direction: column;
+  ColumnsWrapper: styled.div`
+    width: 25%;
 
-    gap: ${pxToRem(7)};
-  `,
+    @media ${device.mobileXS} {
+      width: 50%;
+      padding-bottom: ${pxToRem(20)};
+    }
 
-  Link: styled.a`
-    @media ${device.mobile} {
-      font-size: var(--text-m);
+    @media ${device.mobileXXS} {
+      width: 100%;
     }
   `,
 
   LinksName: styled.li`
     color: var(--gray-500);
+    flex-wrap: wrap;
+    -webkit-font-smoothing: antialiased;
 
     @media ${device.mobile} {
-      font-size: var(--text-m);
+      :not(:last-child) {
+        margin-bottom: ${pxToRem(10)};
+      }
     }
   `,
+
+  Link: styled.a``,
 
   GetAppWrapper: styled.div`
     display: flex;
@@ -161,10 +174,22 @@ export const footerStyled = {
     color: var(--gray-500);
   `,
 
+  LanguageSelectWrapper: styled.div`
+    display: flex;
+    align-items: center;
+  `,
+  FlagWrapper: styled.div`
+    height: ${pxToRem(17)};
+    width: ${pxToRem(24)};
+    svg {
+      height: ${pxToRem(17)};
+      width: ${pxToRem(24)};
+    }
+  `,
+
   FooterSelect: styled(SelectComponent)`
     & .Select__control {
       border: none;
-
       background-color: var(--gray-200);
 
       &:hover {

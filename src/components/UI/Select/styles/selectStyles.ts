@@ -16,7 +16,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       cursor: "pointer",
     };
   },
-  
+
   placeholder: (provided) => ({
     ...provided,
     color: "var(--gray-700)",
@@ -28,7 +28,6 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
     marginTop: 0,
     color: "var(--gray-700)",
     fontSize: "var(--text-s)",
-    fontWidth: "400",
   }),
 
   menuList: (base) => ({

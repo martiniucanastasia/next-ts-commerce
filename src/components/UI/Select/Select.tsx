@@ -7,6 +7,7 @@ export function SelectComponent<T>({
   placeholder,
   className,
   classNamePrefix,
+  isSearchable = true,
   onChange,
 }: SelectProps<T>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
@@ -23,6 +24,8 @@ export function SelectComponent<T>({
       placeholder={placeholder}
       styles={selectStyles}
       isClearable={false}
+      isSearchable={isSearchable}
+      menuPlacement="auto"
     />
   );
 }
