@@ -30,16 +30,9 @@ export const Pagination = ({
   const totalPages = Math.ceil(productsLength / perPage);
   let pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-  const handlePaginationChange = (
-    currentPage: { value: number },
-    perPage: number
-  ) => {
-    onChange(currentPage, perPage);
-  };
-
   useEffect(() => {
     onChange(currentPage, perPage);
-  }, [perPage, currentPage]);
+  }, [currentPage, perPage]);
 
   const renderPaginationLink = (page: number, isActive: boolean) => {
     return (
@@ -55,24 +48,23 @@ export const Pagination = ({
   return (
     <>
       <S.PaginationWrapper>
-        <S.SelectWrapper>
-          {withSelect && (
+        {withSelect && (
+          <S.SelectWrapper>
             <SelectComponent<number>
               placeholder={`Show ${perPage}`}
               options={SELECT_PAGE_RANGES}
+              isSearchable={false}
               onChange={(obj) => {
                 setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
                 setCurrentPage({ value: 1 });
-                handlePaginationChange(currentPage, perPage);
               }}
             />
-          )}
-        </S.SelectWrapper>
+          </S.SelectWrapper>
+        )}
 
         <S.Button
           onClick={() => {
-            currentPage.value > 1 &&
-              setCurrentPage({ value: currentPage.value - 1 });
+            setCurrentPage({ value: currentPage.value - 1 });
           }}
           disabled={currentPage.value === 1 ? true : false}
           variant="secondary"
@@ -84,9 +76,7 @@ export const Pagination = ({
         {pages.map((page) => {
           return (
             <div key={page}>
-              {page === currentPage.value ? (
-                <>{renderPaginationLink(page, page === currentPage.value)}</>
-              ) : (
+              {page && (
                 <>{renderPaginationLink(page, page === currentPage.value)}</>
               )}
             </div>
@@ -95,8 +85,7 @@ export const Pagination = ({
 
         <S.Button
           onClick={() => {
-            currentPage.value < totalPages &&
-              setCurrentPage({ value: currentPage.value + 1 });
+            setCurrentPage({ value: currentPage.value + 1 });
           }}
           disabled={currentPage.value >= totalPages ? true : false}
           variant="secondary"

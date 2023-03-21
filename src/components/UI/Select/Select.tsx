@@ -5,9 +5,9 @@ import { OptionType, SelectProps } from "./types";
 export function SelectComponent<T>({
   options,
   placeholder,
+  isSearchable = true,
   onChange,
 }: SelectProps<T>) {
-  
   const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
   };
@@ -20,6 +20,7 @@ export function SelectComponent<T>({
       placeholder={placeholder}
       styles={selectStyles}
       isClearable={true}
+      isSearchable={isSearchable}
     />
   );
 }

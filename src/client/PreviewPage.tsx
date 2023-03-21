@@ -14,10 +14,6 @@ export const PreviewPage = ({ products }: { products: Product[] }) => {
     });
   };
 
-  useEffect(() => {
-    handleChange({ value: 1 }, 10);
-  }, []);
-
   return (
     <div>
       <h2 style={{ paddingBottom: "20px" }}>Preview Page</h2>
