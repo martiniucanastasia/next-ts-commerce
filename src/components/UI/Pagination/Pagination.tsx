@@ -54,6 +54,7 @@ export const Pagination = ({
               placeholder={`Show ${perPage}`}
               options={SELECT_PAGE_RANGES}
               isSearchable={false}
+              isClearable={false}
               onChange={(obj) => {
                 setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
                 setCurrentPage({ value: 1 });

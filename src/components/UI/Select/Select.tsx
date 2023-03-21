@@ -6,6 +6,7 @@ export function SelectComponent<T>({
   options,
   placeholder,
   isSearchable = true,
+  isClearable = true,
   onChange,
 }: SelectProps<T>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
@@ -19,7 +20,7 @@ export function SelectComponent<T>({
       options={options}
       placeholder={placeholder}
       styles={selectStyles}
-      isClearable={true}
+      isClearable={isClearable}
       isSearchable={isSearchable}
     />
   );
