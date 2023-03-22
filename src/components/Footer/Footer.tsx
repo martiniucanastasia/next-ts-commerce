@@ -6,21 +6,21 @@ import { footerLanguage, footerList } from "./data";
 import { useState } from "react";
 
 import LogoSvg from "@/assets/svg/icon/general/logo.svg";
-import FacebookSvg from "../../assets/svg/icon-contact/social/facebook3.svg";
-import TwitterSvg from "../../assets/svg/icon-contact/social/twitter3.svg";
-import LinkedInSvg from "../../assets/svg/icon-contact/social/linkedin3.svg";
-import InstagramSvg from "../../assets/svg/icon-contact/social/instagram3.svg";
-import YouTubeSvg from "../../assets/svg/icon-contact/social/youtube3.svg";
+import FacebookSvg from "@/assets/svg/icon-contact/social/facebook3.svg";
+import TwitterSvg from "@/assets/svg/icon-contact/social/twitter3.svg";
+import LinkedInSvg from "@/assets/svg/icon-contact/social/linkedin3.svg";
+import InstagramSvg from "@/assets/svg/icon-contact/social/instagram3.svg";
+import YouTubeSvg from "@/assets/svg/icon-contact/social/youtube3.svg";
 
-import AppStorePng from "../../assets/svg/icon/general/market-button-app.svg";
-import GooglePlayPng from "../../assets/svg/icon/general/market-button-google.svg";
+import AppStorePng from "@/assets/svg/icon/general/market-button-app.svg";
+import GooglePlayPng from "@/assets/svg/icon/general/market-button-google.svg";
 
 export const Footer = () => {
   const [languageFlag, setLanguageFlag] = useState(footerLanguage[0].icon);
 
   return (
     <S.GeneralWrapper>
-      <>
+      <S.InitialFooterWrapper>
         <Container>
           <S.FooterWrapper>
             <S.BrandWrapper>
@@ -80,7 +80,7 @@ export const Footer = () => {
             </S.GetAppWrapper>
           </S.FooterWrapper>
         </Container>
-      </>
+      </S.InitialFooterWrapper>
       <S.CopyrightWrapper>
         <Container>
           <S.InnerCopyrightWrapper>

@@ -6,6 +6,7 @@ import { device } from "@/styles/_sizes";
 import { SelectComponent } from "@/components/UI/Select/Select";
 
 export const footerStyled = {
+  InitialFooterWrapper: styled.div`` ,
   GeneralWrapper: styled.div`
     display: flex;
     flex-direction: column;
@@ -171,7 +172,7 @@ export const footerStyled = {
   `,
 
   CopyrightInfo: styled.p`
-    color: var(--gray-500);
+    color: var(--gray-600);
   `,
 
   LanguageSelectWrapper: styled.div`
@@ -198,7 +199,7 @@ export const footerStyled = {
     }
 
     & .Select__placeholder {
-      color: var(--gray-500);
+      color: var(--gray-600);
     }
   `,
 };
