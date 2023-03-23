@@ -4,7 +4,7 @@ import { OptionType } from "../types";
 // @ts-expect-error
 export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
   control: (base, state) => {
-    return {     
+    return {
       ...base,
       borderColor: state.isFocused ? "var(--primary)" : "var(--gray-300)",
       borderRadius: 6,
@@ -16,6 +16,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       cursor: "pointer",
     };
   },
+  
   placeholder: (provided) => ({
     ...provided,
     color: "var(--gray-700)",
@@ -33,11 +34,20 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
   menuList: (base) => ({
     ...base,
   }),
+
   dropdownIndicator: (provided, state) => ({
     ...provided,
+    padding: 5,
+    color: "var(--gray-500)",
     transition: "all .2s ease",
     transform: state.selectProps.menuIsOpen ? "rotate(180deg)" : undefined,
   }),
+
+  indicatorSeparator: (provided) => ({
+    ...provided,
+    display: "none",
+  }),
+
   input: (provided) => ({
     ...provided,
 
@@ -57,6 +67,11 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       },
     };
   },
+
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingRight: 0,
+  }),
 
   noOptionsMessage: (provided) => ({
     ...provided,

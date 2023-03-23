@@ -6,8 +6,10 @@ export function SelectComponent<T>({
   options,
   placeholder,
   isSearchable = true,
-  isClearable = true,
+  className,
+  classNamePrefix,
   onChange,
+  ...props
 }: SelectProps<T>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
@@ -15,12 +17,16 @@ export function SelectComponent<T>({
 
   return (
     <Select<OptionType<T> | null>
+      {...props}
       instanceId="select-box-id"
+      menuPlacement="auto"
       onChange={handleChange}
       options={options}
+      className={className}
+      classNamePrefix={classNamePrefix}
       placeholder={placeholder}
       styles={selectStyles}
-      isClearable={isClearable}
+      isClearable={false}
       isSearchable={isSearchable}
     />
   );
