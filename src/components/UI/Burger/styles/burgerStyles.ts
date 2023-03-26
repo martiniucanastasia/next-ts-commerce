@@ -45,7 +45,7 @@ export const StyledMenu = {
 
     cursor: pointer;
   `,
-  
+
   MenuWrapper: styled.div`
     position: absolute;
 
@@ -88,6 +88,7 @@ export const StyledMenu = {
 
   LinksWrapper: styled.div`
     display: flex;
+    align-items: center;
 
     margin-top: ${pxToRem(10)};
     gap: ${pxToRem(5)};
@@ -97,8 +98,7 @@ export const StyledMenu = {
     display: flex;
     flex-direction: column;
 
-    gap: ${pxToRem(25)};
-    padding: ${pxToRem(20)};
+    padding: ${pxToRem(5)} ${pxToRem(20)};
   `,
 
   GeneralOptionsList: styled.ul`
@@ -106,15 +106,16 @@ export const StyledMenu = {
     flex-direction: column;
 
     border-bottom: 1px solid var(--gray-300);
-
-    padding-bottom: ${pxToRem(25)};
-    gap: ${pxToRem(20)};
+    padding-bottom: ${pxToRem(10)};
+    margin-bottom: ${pxToRem(15)};
   `,
 
   OptionLink: styled.li``,
 
   Link: styled(Link)`
     display: flex;
+
+    padding: 15px 0;
     gap: ${pxToRem(18)};
 
     svg path {
@@ -143,7 +144,6 @@ export const StyledMenu = {
     display: flex;
     flex-direction: column;
 
-    padding: 0 ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(55)};
-    gap: ${pxToRem(30)};
+    padding: 0 ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
   `,
 };
