@@ -1,8 +1,8 @@
-import { StylesConfig } from "react-select";
+import { GroupBase, StylesConfig } from "react-select";
 import { OptionType } from "../types";
 
 // @ts-expect-error
-export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
+export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase<OptionType<T> | null>> | undefined = {
   control: (base, state) => {
     return {
       ...base,
@@ -24,6 +24,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
 
   menu: (base) => ({
     ...base,
+    width: "auto",
     borderRadius: 6,
     marginTop: 0,
     color: "var(--gray-700)",
@@ -67,6 +68,11 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       },
     };
   },
+
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingRight: 0,
+  }),
 
   valueContainer: (provided) => ({
     ...provided,

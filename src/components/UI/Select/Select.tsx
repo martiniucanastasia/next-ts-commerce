@@ -5,19 +5,18 @@ import { OptionType, SelectProps } from "./types";
 export function SelectComponent<T>({
   options,
   placeholder,
-  isSearchable = true,
   className,
   classNamePrefix,
+  isSearchable = true,
   onChange,
   ...props
-}: SelectProps<T>) {
+}: SelectProps<T, OptionType<T>>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
   };
 
   return (
     <Select<OptionType<T> | null>
-      {...props}
       instanceId="select-box-id"
       menuPlacement="auto"
       onChange={handleChange}
@@ -25,9 +24,11 @@ export function SelectComponent<T>({
       className={className}
       classNamePrefix={classNamePrefix}
       placeholder={placeholder}
+      // @ts-expect-error
       styles={selectStyles}
       isClearable={false}
       isSearchable={isSearchable}
+      {...props}
     />
   );
 }

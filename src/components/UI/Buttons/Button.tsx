@@ -4,21 +4,21 @@ import { ButtonProps } from "./types";
 export const Button = ({
   size = "normal",
   variant = "primary",
+  available = true,
   visual,
   disabled,
   className,
-  onClick,
   children,
-  available = true,
+  onClick,
 }: ButtonProps) => (
   <S.Button
     size={size}
     variant={variant}
-    visual={visual}
-    onClick={onClick}
     available={available}
+    visual={visual}
     disabled={disabled}
     className={className}
+    onClick={onClick}
   >
     {children}
   </S.Button>

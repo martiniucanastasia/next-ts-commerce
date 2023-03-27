@@ -7,6 +7,7 @@ export interface InputProps {
   button?: ReactElement<ButtonProps>;
   label?: string;
   visual?: string;
+  className?: string;
   hint?: {
     message: string;
     position?: string;
