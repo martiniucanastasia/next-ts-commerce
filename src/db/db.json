@@ -438,5 +438,22 @@
             "id": 3,
             "name": "Home"
         }
+    ],
+    "languages": [
+        {
+            "value": "EN",
+            "label": "English, USA",
+            "icon": "/usa_flag.svg"
+        },  
+        {
+            "value": "DK",
+            "label": "Denmark, DKK",
+            "icon": "/dk_flag.svg"
+        },
+        {
+            "value": "FR",
+            "label": "France, FR",
+            "icon": "/france_flag.svg"
+        }
     ]
 }

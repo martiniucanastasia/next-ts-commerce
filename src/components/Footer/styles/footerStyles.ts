@@ -6,7 +6,7 @@ import { device } from "@/styles/_sizes";
 import { SelectComponent } from "@/components/UI/Select/Select";
 
 export const footerStyled = {
-  InitialFooterWrapper: styled.div`` ,
+  InitialFooterWrapper: styled.div``,
   GeneralWrapper: styled.div`
     display: flex;
     flex-direction: column;
@@ -178,14 +178,6 @@ export const footerStyled = {
   LanguageSelectWrapper: styled.div`
     display: flex;
     align-items: center;
-  `,
-  FlagWrapper: styled.div`
-    height: ${pxToRem(17)};
-    width: ${pxToRem(24)};
-    svg {
-      height: ${pxToRem(17)};
-      width: ${pxToRem(24)};
-    }
   `,
 
   FooterSelect: styled(SelectComponent)`

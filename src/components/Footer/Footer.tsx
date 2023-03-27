@@ -2,7 +2,8 @@
 
 import { Container } from "@/styles/_common";
 import { footerStyled as S } from "./styles/footerStyles";
-import { footerLanguage, footerList } from "./data";
+import { Languages } from "@/types/types";
+import { footerList } from "./data";
 import { useState } from "react";
 
 import LogoSvg from "@/assets/svg/icon/general/logo.svg";
@@ -12,11 +13,12 @@ import LinkedInSvg from "@/assets/svg/icon-contact/social/linkedin3.svg";
 import InstagramSvg from "@/assets/svg/icon-contact/social/instagram3.svg";
 import YouTubeSvg from "@/assets/svg/icon-contact/social/youtube3.svg";
 
+import Image from "next/image";
 import AppStorePng from "@/assets/svg/icon/general/market-button-app.svg";
 import GooglePlayPng from "@/assets/svg/icon/general/market-button-google.svg";
 
-export const Footer = () => {
-  const [languageFlag, setLanguageFlag] = useState(footerLanguage[0].icon);
+export const Footer = ({ languages }: { languages: Languages }) => {
+  const [languageFlag, setLanguageFlag] = useState(languages[0].icon);
 
   return (
     <S.GeneralWrapper>
@@ -26,7 +28,7 @@ export const Footer = () => {
             <S.BrandWrapper>
               <LogoSvg />
               <S.BrandInfo>
-                Best information about the company gies here but now lorem ipsum
+                Best information about the company goes here but now lorem ipsum
                 is
               </S.BrandInfo>
               <S.SocialLinks>
@@ -87,13 +89,13 @@ export const Footer = () => {
             <S.CopyrightInfo> &#169; 2023 Ecommerce.</S.CopyrightInfo>
 
             <S.LanguageSelectWrapper>
-              <S.FlagWrapper>{languageFlag}</S.FlagWrapper>
+              <Image src={languageFlag} width={20} height={20} alt="alt" />
 
               <S.FooterSelect
                 classNamePrefix="Select"
                 isSearchable={false}
-                placeholder={footerLanguage[0].label}
-                options={footerLanguage}
+                placeholder={languages[0].label}
+                options={languages}
                 onChange={(value) => {
                   setLanguageFlag(value?.icon);
                 }}
