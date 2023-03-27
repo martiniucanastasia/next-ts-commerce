@@ -1,8 +1,8 @@
-import { StylesConfig } from "react-select";
+import { GroupBase, StylesConfig } from "react-select";
 import { OptionType } from "../types";
 
 // @ts-expect-error
-export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
+export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase<OptionType<T> | null>> | undefined = {
   control: (base, state) => {
     return {
       ...base,

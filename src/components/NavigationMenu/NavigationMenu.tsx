@@ -8,7 +8,13 @@ import {
 import { createElement, useState } from "react";
 import { Container } from "@/styles/_common";
 import { Burger } from "../UI/Burger/Burger";
-import { Categories, Languages, Shippings, HeaderLinks, BurgerContents } from "@/types/types";
+import {
+  Categories,
+  Languages,
+  Shippings,
+  HeaderLinks,
+  BurgerContents,
+} from "@/types/types";
 import { navBarOptions, helpOptions } from "./data";
 
 import Image from "next/image";

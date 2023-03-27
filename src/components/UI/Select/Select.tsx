@@ -10,7 +10,7 @@ export function SelectComponent<T>({
   isSearchable = true,
   onChange,
   ...props
-}: SelectProps<T>) {
+}: SelectProps<T, OptionType<T>>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
   };
@@ -24,6 +24,7 @@ export function SelectComponent<T>({
       className={className}
       classNamePrefix={classNamePrefix}
       placeholder={placeholder}
+      // @ts-expect-error
       styles={selectStyles}
       isClearable={false}
       isSearchable={isSearchable}
