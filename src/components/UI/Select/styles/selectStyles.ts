@@ -1,8 +1,7 @@
-import { GroupBase, StylesConfig } from "react-select";
+import { StylesConfig } from "react-select";
 import { OptionType } from "../types";
 
-// @ts-expect-error
-export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase<OptionType<T> | null>> | undefined = {
+export const selectStyles: StylesConfig<OptionType> = {
   control: (base, state) => {
     return {
       ...base,
@@ -16,7 +15,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase
       cursor: "pointer",
     };
   },
-  
+
   placeholder: (provided) => ({
     ...provided,
     color: "var(--gray-700)",
@@ -68,11 +67,6 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase
       },
     };
   },
-
-  valueContainer: (provided) => ({
-    ...provided,
-    paddingRight: 0,
-  }),
 
   valueContainer: (provided) => ({
     ...provided,

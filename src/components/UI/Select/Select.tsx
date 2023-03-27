@@ -1,34 +1,18 @@
-import Select from "react-select";
+import { FunctionComponent } from "react";
+import Select, { Props as SelectProps, StylesConfig } from "react-select";
 import { selectStyles } from "./styles/selectStyles";
-import { OptionType, SelectProps } from "./types";
+import { OptionType } from "./types";
 
-export function SelectComponent<T>({
-  options,
-  placeholder,
-  className,
-  classNamePrefix,
-  isSearchable = true,
-  onChange,
-  ...props
-}: SelectProps<T, OptionType<T>>) {
-  const handleChange = (selectedOption: OptionType<T> | null) => {
-    onChange(selectedOption);
-  };
+interface Props extends SelectProps<OptionType> {}
 
+export const SelectComponent: FunctionComponent<Props> = ({ ...props }) => {
   return (
-    <Select<OptionType<T> | null>
+    <Select
       instanceId="select-box-id"
       menuPlacement="auto"
-      onChange={handleChange}
-      options={options}
-      className={className}
-      classNamePrefix={classNamePrefix}
-      placeholder={placeholder}
-      // @ts-expect-error
-      styles={selectStyles}
       isClearable={false}
-      isSearchable={isSearchable}
+      styles={selectStyles as StylesConfig<OptionType>}
       {...props}
     />
   );
-}
+};
