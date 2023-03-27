@@ -17,7 +17,6 @@ export function SelectComponent<T>({
 
   return (
     <Select<OptionType<T> | null>
-      {...props}
       instanceId="select-box-id"
       menuPlacement="auto"
       onChange={handleChange}
@@ -28,6 +27,7 @@ export function SelectComponent<T>({
       styles={selectStyles}
       isClearable={false}
       isSearchable={isSearchable}
+      {...props}
     />
   );
 }

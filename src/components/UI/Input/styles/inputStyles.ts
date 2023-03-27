@@ -35,9 +35,10 @@ export const inputStyles = {
   InputWrapper: styled.div`
     display: flex;
   `,
-  GeneratWrapper: styled.div`
+  GeneralWrapper: styled.div`
     display: flex;
     flex-direction: column;
+    width: 100%;
   `,
   Input: styled.input<Pick<InputProps, "visual">>`
     display: block;
@@ -48,10 +49,12 @@ export const inputStyles = {
 
     border-radius: ${pxToRem(6)};
     border: 1px solid var(--gray-300);
+    font-size: var(--text-s);
     outline: none;
 
     ::placeholder {
       color: var(--gray-500);
+      font-size: var(--text-s);
     }
 
     :focus {
@@ -67,10 +70,10 @@ export const inputStyles = {
     width: 100%;
     padding: ${pxToRem(10)};
 
-    
     border-radius: ${pxToRem(6)};
     border: 1px solid var(--gray-300);
-    
+    font-size: var(--text-s);
+
     resize: vertical;
     :focus {
       border-color: var(--primary);
@@ -79,6 +82,7 @@ export const inputStyles = {
     ::placeholder {
       color: var(--gray-500);
       font-family: var(--font-primary);
+      font-size: var(--text-s);
     }
 
     ::-webkit-resizer {

@@ -67,6 +67,10 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       },
     };
   },
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingRight: 0,
+  }),
 
   valueContainer: (provided) => ({
     ...provided,

@@ -10,3 +10,12 @@ export type Product = {
   verified: boolean;
   image: string;
 };
+
+export type Category = {
+  categories: [
+    {
+      value: number;
+      label: string;
+    }
+  ];
+};

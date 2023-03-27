@@ -423,20 +423,20 @@
     ],
     "categories": [
         {
-            "id": 0,
-            "name": "Clothes"
+            "value": 0,
+            "label": "Clothes"
         },
         {
-            "id": 1,
-            "name": "Tech"
+            "value": 1,
+            "label": "Tech"
         },
         {
-            "id": 2,
-            "name": "Furniture"
+            "value": 2,
+            "label": "Furniture"
         },
         {
-            "id": 3,
-            "name": "Home"
+            "value": 3,
+            "label": "Home"
         }
     ]
 }
