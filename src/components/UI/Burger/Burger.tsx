@@ -1,22 +1,29 @@
 "use client";
 
-import { useOutsideClick } from "@/hooks/useOutsideClick";
-import { createElement, Dispatch, SetStateAction, useState } from "react";
-import { additionalOptions, infoOptions, linksOptions } from "./data";
-import { languageOptions } from "@/components/NavgationMenu/data";
+import { Dispatch, SetStateAction, useState } from "react";
+import { Languages, BurgerContents } from "@/types/types";
 import { StyledBurger, StyledMenu as S } from "./styles/burgerStyles";
 
+import Image from "next/image";
 import MenuSvg from "@/assets/svg/icon/control/menu.svg";
 import AvatarSvg from "@/assets/svg/icon/general/avatar.svg";
-import LangiageSvg from "@/assets/svg/icon/general/language.svg";
+import LanguageSvg from "@/assets/svg/icon/general/language.svg";
 
 interface BurgerProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export const Burger = () => {
+export const Burger = ({
+  languages,
+  burgerContents,
+}: {
+  languages: Languages;
+  burgerContents: BurgerContents;
+}) => {
   const [open, setOpen] = useState<boolean>(false);
+
+  const { general, additional, info } = burgerContents;
 
   const BurgerBase = ({ open, setOpen }: BurgerProps) => {
     return (
@@ -26,12 +33,11 @@ export const Burger = () => {
     );
   };
 
-  const BugerMenu = ({ open, setOpen }: BurgerProps) => {
-    const handleClickOutside = () => setOpen(false);
-    const ref = useOutsideClick(handleClickOutside);
+  const BurgerMenu = ({ open, setOpen }: BurgerProps) => {
     return (
       <>
-        <S.MenuWrapper ref={ref} open={open}>
+        <S.BurgerMenuWrapper open={open} onClick={() => setOpen(!open)} />
+        <S.MenuWrapper open={open}>
           <S.UserLogInWrapper>
             <AvatarSvg />
             <S.LinksWrapper>
@@ -42,11 +48,16 @@ export const Burger = () => {
           </S.UserLogInWrapper>
           <S.OptionsWrapper>
             <S.GeneralOptionsList>
-              {linksOptions.map((link) => {
+              {general.map((link) => {
                 return (
                   <S.OptionLink key={link.value}>
                     <S.Link href="">
-                      {createElement(link.icon)}
+                      <Image
+                        src={link.icon}
+                        width={20}
+                        height={20}
+                        alt={link.label}
+                      />
                       {link.label}
                     </S.Link>
                   </S.OptionLink>
@@ -56,20 +67,26 @@ export const Burger = () => {
 
             <S.GeneralOptionsList>
               <S.BurgerSelectWrapper>
-                <LangiageSvg />
+                <LanguageSvg />
+
                 <S.BurgerSelect
                   classNamePrefix="Select"
                   isSearchable={false}
-                  placeholder={languageOptions[0].label}
-                  options={languageOptions}
+                  placeholder={languages[0].label}
+                  options={languages}
                   onChange={(e) => console.log(e)}
                 />
               </S.BurgerSelectWrapper>
-              {additionalOptions.map((link) => {
+              {additional.map((link) => {
                 return (
                   <S.OptionLink key={link.value}>
                     <S.Link href="">
-                      {createElement(link.icon)}
+                      <Image
+                        src={link.icon}
+                        width={20}
+                        height={20}
+                        alt={link.label}
+                      />
                       {link.label}
                     </S.Link>
                   </S.OptionLink>
@@ -78,7 +95,7 @@ export const Burger = () => {
             </S.GeneralOptionsList>
 
             <S.InfoWrapper>
-              {infoOptions.map((link) => {
+              {info.map((link) => {
                 return (
                   <S.OptionLink key={link.value}>
                     <S.Link href="">{link.label}</S.Link>
@@ -94,7 +111,7 @@ export const Burger = () => {
   return (
     <>
       <BurgerBase open={open} setOpen={setOpen} />
-      <BugerMenu open={open} setOpen={setOpen} />
+      <BurgerMenu open={open} setOpen={setOpen} />
     </>
   );
 };

@@ -11,11 +11,44 @@ export type Product = {
   image: string;
 };
 
-export type Category = {
-  categories: [
-    {
-      value: number;
-      label: string;
-    }
-  ];
+export type Categories = {
+  value: number;
+  label: string;
+}[];
+
+export type Shippings = {
+  value: number;
+  label: string;
+  icon: any;
+}[];
+
+export type Languages = {
+  value: string;
+  label: string;
+  icon: any;
+}[];
+
+export type HeaderLinks = {
+  value: string;
+  label: string;
+  icon: any;
+}[];
+
+export type BurgerContents = {
+  general: {
+    value: string;
+    label: string;
+    icon?: any;
+  }[];
+
+  additional: {
+    value: string;
+    label: string;
+    icon?: any;
+  }[];
+
+  info: {
+    value: string;
+    label: string;
+  }[];
 };

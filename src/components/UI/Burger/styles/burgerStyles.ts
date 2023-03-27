@@ -10,10 +10,6 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   top: ${pxToRem(20)};
   left: ${pxToRem(22)};
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
   padding: 0;
 
   background: transparent;
@@ -28,6 +24,28 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   }
 `;
 export const StyledMenu = {
+  BurgerMenuWrapper: styled.div<{ open: boolean }>`
+    display: ${({ open }: { open: boolean }) => (open ? "block" : "none")};
+    background: var(--primary);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(231, 231, 231, 0.3) 22.39%,
+      rgba(209, 209, 209, 0.3) 42.6%,
+      rgba(182, 182, 182, 0.3) 79.19%,
+      rgba(156, 156, 156, 0.3) 107.86%
+    );
+
+    opacity: 0.8;
+    position: fixed;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+  `,
+  
   MenuWrapper: styled.div`
     position: absolute;
 
@@ -35,7 +53,6 @@ export const StyledMenu = {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
     display: ${({ open }: { open: boolean }) => (open ? "block" : "none")};
 
@@ -50,7 +67,8 @@ export const StyledMenu = {
 
     color: black;
 
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    float: left;
+    overflow-y: auto;
 
     @media ${device.mobileS} {
       width: 50%;
@@ -62,13 +80,10 @@ export const StyledMenu = {
   `,
 
   UserLogInWrapper: styled.div`
-    display: flex;
-    flex-direction: column;
-
+    width: 100%;
     padding: ${pxToRem(20)};
 
     background-color: var(--gray-200);
-    height: ${pxToRem(113)};
   `,
 
   LinksWrapper: styled.div`
@@ -79,7 +94,11 @@ export const StyledMenu = {
   `,
 
   OptionsWrapper: styled.div`
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    gap: ${pxToRem(25)};
+    padding: ${pxToRem(20)};
   `,
 
   GeneralOptionsList: styled.ul`
@@ -88,33 +107,28 @@ export const StyledMenu = {
 
     border-bottom: 1px solid var(--gray-300);
 
-    padding-bottom: 20px;
+    padding-bottom: ${pxToRem(25)};
+    gap: ${pxToRem(20)};
   `,
-  OptionLink: styled.li`
-    :not(:first-child) {
-      padding-top: ${pxToRem(30)};
-    }
-  `,
+
+  OptionLink: styled.li``,
+
   Link: styled(Link)`
     display: flex;
-
     gap: ${pxToRem(18)};
 
     svg path {
       fill: var(--gray-500);
     }
   `,
+
   BurgerSelectWrapper: styled.li`
     display: flex;
     align-items: center;
 
-    padding-top: ${pxToRem(20)};
     gap: ${pxToRem(16)};
-
-    svg path {
-      fill: var(--gray-500);
-    }
   `,
+
   BurgerSelect: styled(SelectComponent)`
     & .Select__control {
       border: none;
@@ -123,13 +137,13 @@ export const StyledMenu = {
     & .Select__value-container {
       padding: 0;
     }
-
-    & .Select__indicator {
-      display: none;
-    }
   `,
 
   InfoWrapper: styled.ul`
-    padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(55)};
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(55)};
+    gap: ${pxToRem(30)};
   `,
 };

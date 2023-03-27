@@ -93,11 +93,12 @@ export const navigationMenuStyles = {
     }
   `,
 
-  HeaderLink: styled.li`
+  HeaderLinkList: styled.li`
     white-space: nowrap;
+    color: var(--gray-500);
 
     svg path {
-      fill: var(--gray-500);
+      fill: currentColor;
     }
 
     @media ${device.mobile} {
@@ -106,12 +107,14 @@ export const navigationMenuStyles = {
       }
     }
   `,
-  IconLink: styled.div``,
+ 
 
-  TextLink: styled(Link)`
+  HeaderLink: styled(Link)`
     text-align: center;
+  `,
+
+  HeaderTextLink: styled.p`
     padding-top: ${pxToRem(3)};
-    color: var(--gray-500);
     font-size: var(--text-xxxs);
   `,
 
@@ -123,15 +126,6 @@ export const navigationMenuStyles = {
     @media ${device.mobile} {
       padding: ${pxToRem(15)} 0;
       border: none;
-    }
-  `,
-
-  SVGWrapper: styled.div`
-    display: flex;
-    margin-right: ${pxToRem(9)};
-
-    @media ${device.mobile} {
-      display: none;
     }
   `,
 
@@ -147,7 +141,6 @@ export const navigationMenuStyles = {
   NavLinksWrapper: styled.div`
     display: flex;
     align-items: center;
-    text-align: center;
 
     @media ${device.mobile} {
       svg {
@@ -155,38 +148,53 @@ export const navigationMenuStyles = {
       }
     }
   `,
-  LinksList: styled.ul`
+
+  NavbarLinksList: styled.ul`
     display: flex;
+    margin-right: ${pxToRem(17)};
+
+    gap: ${pxToRem(25)};
+
+    svg {
+      margin-right: ${pxToRem(9)};
+    }
 
     @media ${device.mobile} {
+      margin-right: 0;
+
       gap: ${pxToRem(3)};
     }
   `,
 
-  NavLink: styled.li`
+  NavbarLink: styled.li`
     display: flex;
     align-items: center;
 
-    margin-right: ${pxToRem(25)};
-
     @media ${device.mobile} {
-      margin: 0;
       white-space: nowrap;
-      padding: ${pxToRem(9)};
 
       background-color: var(--gray-200);
       border-radius: ${pxToRem(6)};
       color: var(--primary);
     }
   `,
+  NavLink: styled(Link)`
+    display: flex;
+    align-items: center;
 
-  NavTextLink: styled(Link)`
+    @media ${device.mobile} {
+      padding: ${pxToRem(9)};
+    }
+  `,
+
+  NavText: styled.p`
     font-weight: 500;
 
     @media ${device.mobile} {
       font-weight: 400;
     }
   `,
+
   HelpSelect: styled(SelectComponent)`
     & .Select__control {
       border: none;
@@ -237,13 +245,13 @@ export const mobileStyles = {
     display: none;
 
     @media ${device.mobile} {
-      display: block;
       display: flex;
 
       padding-right: ${pxToRem(5)};
       gap: ${pxToRem(20)};
     }
   `,
+
   MobileLink: styled(Link)``,
 
   MobileSearch: styled(Input)`

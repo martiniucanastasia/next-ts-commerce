@@ -24,6 +24,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
 
   menu: (base) => ({
     ...base,
+    width: "auto",
     borderRadius: 6,
     marginTop: 0,
     color: "var(--gray-700)",
@@ -67,6 +68,7 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
       },
     };
   },
+
   valueContainer: (provided) => ({
     ...provided,
     paddingRight: 0,

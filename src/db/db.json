@@ -350,7 +350,7 @@
         },
         {
             "id": 30,
-            "name": "Wall Pictire",
+            "name": "Wall Picture",
             "category": "Home",
             "rating": 7,
             "price": 15,
@@ -438,5 +438,114 @@
             "value": 3,
             "label": "Home"
         }
-    ]
+    ],
+    "shipping": [
+        {
+            "value": 0,
+            "label": "Ship to USA",
+            "icon": "/usa_flag.svg"
+        },
+        {
+            "value": 1,
+            "label": "Ship to DK",
+            "icon": "/dk_flag.svg"
+       
+        },
+        {
+            "value": 2,
+            "label": "Ship to FR",
+            "icon": "/france_flag.svg"
+
+        }
+    ],
+    "languages": [
+        {
+            "value": "EN",
+            "label": "English, USA",
+            "icon": "/usa_flag.svg"
+        },  
+        {
+            "value": "DK",
+            "label": "Denmark, DKK",
+            "icon": "/dk_flag.svg"
+        },
+        {
+            "value": "FR",
+            "label": "France, FR",
+            "icon": "/france_flag.svg"
+        }
+    ],
+
+    "links": [
+        {
+            "value": "Profile",
+            "label": "Profile",
+            "icon": "/person.svg"
+        },  
+        {
+            "value": "Message",
+            "label": "Message",
+            "icon": "/chat.svg"
+        },
+        {
+            "value": "Orders",
+            "label": "Orders",
+            "icon": "/favorite_border.svg"
+        },
+        {
+            "value": "My Cart",
+            "label": "My Cart",
+            "icon": "/shopping_cart.svg"
+        }
+    ],
+    "burgerContents": {
+        "general": [
+            {
+                "value": "Home",
+                "label": "Home",
+                "icon": "/home.svg"
+            },  
+            {
+                "value": "Categories",
+                "label": "Categories",
+                "icon": "/list.svg"
+            },
+            {
+                "value": "Favorites",
+                "label": "Favorites",
+                "icon": "/favorite_border_black.svg"
+            },
+            {
+                "value": "My orders",
+                "label": "My orders",
+                "icon": "/inventory_2.svg"
+            }
+        ],
+        "additional": [
+            {
+                "value": "Contact us",
+                "label": "Contact us",
+                "icon": "/headset_mic.svg"
+            },
+            {
+                "value": "About",
+                "label": "About",
+                "icon": "/business.svg"
+            }
+        ],
+        "info": [
+            {
+                "value": "User agreement",
+                "label": "User agreement"
+            },
+            {
+                "value": "Partnership",
+                "label": "Partnership"
+            },
+            {
+                "value": "Privacy policy",
+                "label": "Privacy policy"
+            }
+        ]
+    }
 }
