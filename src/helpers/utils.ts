@@ -4,7 +4,13 @@ export const getRandomNumber = (
   min: RandomNum["min"],
   max: RandomNum["max"]
 ) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+
+  if (randomNum < 10) {
+    return `0${randomNum}`;
+  } else {
+    return randomNum.toString();
+  }
 };
 
 export const getTime = () => {
