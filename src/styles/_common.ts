@@ -7,7 +7,7 @@ export const pxToRem = (...px: number[]) => {
 };
 
 export const Container = styled.div`
-  max-width: ${pxToRem(1440)};
+  max-width: ${pxToRem(1210)};
   margin: 0 auto;
-  padding: 0;
+  padding: 0 ${pxToRem(15)};
 `;

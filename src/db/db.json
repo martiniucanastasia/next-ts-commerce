@@ -10,7 +10,7 @@
             "brand": "Nike",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/cloth/01.jpg"
+            "image": "/cloth_01.jpg"
         },
         {
             "id": 2,
@@ -22,7 +22,7 @@
             "brand": "Nike",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/cloth/02.jpg"
+            "image": "/cloth_02.jpg"
         },
         {
             "id": 3,
@@ -34,7 +34,7 @@
             "brand": "H&M",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/cloth/03.jpg"
+            "image": "/cloth_03.jpg"
         },
         {
             "id": 4,
@@ -46,7 +46,7 @@
             "brand": "Diesel",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/cloth/04.jpg"
+            "image": "/cloth_04.jpg"
         },
         {
             "id": 5,
@@ -58,7 +58,7 @@
             "brand": "Nike",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/cloth/05.jpg"
+            "image": "/cloth_05.jpg"
         },
         {
             "id": 6,
@@ -70,7 +70,7 @@
             "brand": "Diesel",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/cloth/06.jpg"
+            "image": "/cloth_06.jpg"
         },
         {
             "id": 7,
@@ -82,7 +82,7 @@
             "brand": "Diesel",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/cloth/07.jpg"
+            "image": "/cloth_07.jpg"
         },
         {
             "id": 8,
@@ -94,7 +94,7 @@
             "brand": "GoPro",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/tech/01.jpg"
+            "image": "/tech_01.jpg"
         },
         {
             "id": 9,
@@ -106,7 +106,7 @@
             "brand": "Apple",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/tech/02.jpg"
+            "image": "/tech_02.jpg"
         },
         {
             "id": 10,
@@ -118,7 +118,7 @@
             "brand": "Xioami",
             "condition": "Old items",
             "verified" : true,
-            "image": "/src/assets/png/tech/03.jpg"
+            "image": "/tech_03.jpg"
         },
         {
             "id": 11,
@@ -130,7 +130,7 @@
             "brand": "Xioami",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/tech/04.jpg"
+            "image": "/tech_04.jpg"
         },
         {
             "id": 12,
@@ -142,7 +142,7 @@
             "brand": "Apple",
             "condition": "Refurbished",
             "verified" : true,
-            "image": "/src/assets/png/tech/05.jpg"
+            "image": "/tech_05.jpg"
         },
         {
             "id": 13,
@@ -154,7 +154,7 @@
             "brand": "CosmicByte",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/tech/05.jpg"
+            "image": "/tech_06.jpg"
         },
         {
             "id": 14,
@@ -166,7 +166,7 @@
             "brand": "Canon",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/tech/07.jpg"
+            "image": "/tech_07.jpg"
         },
         {
             "id": 15,
@@ -178,7 +178,7 @@
             "brand": "Apple",
             "condition": "Old items",
             "verified" : false,
-            "image": "/src/assets/png/tech/08.jpg"
+            "image": "/tech_08.jpg"
         },
         {
             "id": 16,
@@ -190,7 +190,7 @@
             "brand": "Apple",
             "condition": "Refurbished",
             "verified" : true,
-            "image": "/src/assets/png/tech/09.jpg"
+            "image": "/tech_09.jpg"
         },
         {
             "id": 17,
@@ -202,7 +202,7 @@
             "brand": "CosmicByte",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/tech/10.jpg"
+            "image": "/tech_10.jpg"
         },
         {
             "id": 18,
@@ -214,7 +214,7 @@
             "brand": "Xioami",
             "condition": "Refurbished",
             "verified" : true,
-            "image": "/src/assets/png/tech/11.jpg"
+            "image": "/tech_11.jpg"
         },
         {
             "id": 19,
@@ -226,7 +226,7 @@
             "brand": "IKEA",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/furniture/01.jpg"
+            "image": "/furn_01.jpg"
         },
         {
             "id": 20,
@@ -238,7 +238,7 @@
             "brand": "IKEA",
             "condition": "Old items",
             "verified" : false,
-            "image": "/src/assets/png/furniture/02.jpg"
+            "image": "/furn_02.jpg"
         },
         {
             "id": 21,
@@ -250,7 +250,7 @@
             "brand": "Amazon Furniture",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/furniture/03.jpg"
+            "image": "/furn_03.jpg"
         },
         {
             "id": 22,
@@ -262,7 +262,7 @@
             "brand": "Amazon Furniture",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/furniture/04.jpg"
+            "image": "/furn_04.jpg"
         },
         {
             "id": 23,
@@ -274,7 +274,7 @@
             "brand": "IKEA",
             "condition": "Old items",
             "verified" : true,
-            "image": "/src/assets/png/furniture/05.jpg"
+            "image": "/furn_05.jpg"
         },
         {
             "id": 24,
@@ -286,7 +286,7 @@
             "brand": "Amazon Furniture",
             "condition": "IKEA",
             "verified" : false,
-            "image": "/src/assets/png/furniture/06.jpg"
+            "image": "/furn_06.jpg"
         },
         {
             "id": 25,
@@ -298,7 +298,7 @@
             "brand": "Amazon Furniture",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/furniture/07.jpg"
+            "image": "/furn_07.jpg"
         },
         {
             "id": 26,
@@ -310,7 +310,7 @@
             "brand": "IKEA",
             "condition": "New",
             "verified" : false,
-            "image": "/src/assets/png/other/01.jpg"
+            "image": "/other_01.jpg"
         },
         {
             "id": 27,
@@ -322,7 +322,7 @@
             "brand": "IKEA",
             "condition": "New",
             "verified" : true,
-            "image": "/src/assets/png/other/02.jpg"
+            "image": "/other_02.jpg"
         },
         {
             "id": 28,
@@ -334,7 +334,7 @@
             "brand": "IKEA",
             "condition": "Old items",
             "verified" : false,
-            "image": "/src/assets/png/other/03.jpg"
+            "image": "/other_03.jpg"
         },
         {
             "id": 29,
@@ -346,7 +346,7 @@
             "brand": "IKEA",
             "condition": "Old items",
             "verified" : false,
-            "image": "/src/assets/png/other/04.jpg"
+            "image": "/other_04.jpg"
         },
         {
             "id": 30,
@@ -358,7 +358,7 @@
             "brand": "Amazon Furniture",
             "condition": "Old items",
             "verified" : false,
-            "image": "/src/assets/png/other/05.jpg"
+            "image": "/other_05.jpg"
         },
         {
             "id": 31,
@@ -370,7 +370,7 @@
             "brand": "Amazon Furniture",
             "condition": "Old items",
             "verified" : true,
-            "image": "/src/assets/png/other/06.jpg"
+            "image": "/other_06.jpg"
         },
         {
             "id": 32,
@@ -382,7 +382,7 @@
             "brand": "Amazon Furniture",
             "condition": "Old items",
             "verified" : true,
-            "image": "/src/assets/png/other/07.jpg"
+            "image": "/other_07.jpg"
         },
         {
             "id": 33,
@@ -394,7 +394,7 @@
             "brand": "LG",
             "condition": "Refurbished",
             "verified" : true,
-            "image": "/src/assets/png/other/08.jpg"
+            "image": "/other_08.jpg"
         },
         {
             "id": 34,
@@ -406,7 +406,7 @@
             "brand": "LG",
             "condition": "Refurbished",
             "verified" : false,
-            "image": "/src/assets/png/other/09.jpg"
+            "image": "/other_09.jpg"
         },
         {
             "id": 35,
@@ -418,7 +418,7 @@
             "brand": "LG",
             "condition": "Refurbished",
             "verified" : true,
-            "image": "/src/assets/png/other/10.jpg"
+            "image": "/other_10.jpg"
         }
     ],
     "categories": [

@@ -16,9 +16,12 @@ const colors = css`
   --secondary-100: #c3ffcb;
 
   --danger: #fa3434;
+  --danger-100: #FFE3E3;
 
   --warning: #ff9017;
   --warning-100: #ffe5bf;
+
+  --notice:
 
   --primary-gradient: linear-gradient(
     to right,
