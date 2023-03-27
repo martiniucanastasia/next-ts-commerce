@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { pxToRem } from "@/styles/_common";
+import { Container, pxToRem } from "@/styles/_common";
 
 import { Input } from "@/components/UI/Input/Input";
 import { SelectComponent } from "@/components/UI/Select/Select";
@@ -9,9 +9,9 @@ import { device } from "@/styles/_sizes";
 
 export const navigationMenuStyles = {
   HeaderWrapper: styled.div`
-    position: relative;
     display: flex;
     align-items: center;
+
     padding: ${pxToRem(22)} 0;
 
     @media ${device.mobile} {
@@ -59,6 +59,8 @@ export const navigationMenuStyles = {
   `,
 
   HeaderSelect: styled(SelectComponent)`
+    width: ${pxToRem(145)};
+
     & .Select__control {
       max-height: ${pxToRem(40)};
 
@@ -77,7 +79,7 @@ export const navigationMenuStyles = {
     padding-right: ${pxToRem(23)};
   `,
 
-  LinksWrapper: styled.div`
+  HeaderLinksWrapper: styled.ul`
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -91,11 +93,22 @@ export const navigationMenuStyles = {
     }
   `,
 
-  HeaderLink: styled(Link)`
+  HeaderLink: styled.li`
     white-space: nowrap;
-  `,
 
-  TextLink: styled.p`
+    svg path {
+      fill: var(--gray-500);
+    }
+
+    @media ${device.mobile} {
+      svg path {
+        fill: var(--gray-700);
+      }
+    }
+  `,
+  IconLink: styled.div``,
+
+  TextLink: styled(Link)`
     text-align: center;
     padding-top: ${pxToRem(3)};
     color: var(--gray-500);
@@ -103,8 +116,9 @@ export const navigationMenuStyles = {
   `,
 
   NavbarWrapper: styled.div`
-    padding: ${pxToRem(22)} 0;
-    border: 1px solid var(--gray-200);
+    padding: ${pxToRem(7)} 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
 
     @media ${device.mobile} {
       padding: ${pxToRem(15)} 0;
@@ -112,19 +126,16 @@ export const navigationMenuStyles = {
     }
   `,
 
-  NavbarLinksWrapper: styled.div`
+  SVGWrapper: styled.div`
     display: flex;
-    align-items: center;
-    text-align: center;
-
-    gap: ${pxToRem(25)};
+    margin-right: ${pxToRem(9)};
 
     @media ${device.mobile} {
-      gap: ${pxToRem(3)};
+      display: none;
     }
   `,
 
-  NavLinksWrapper: styled.div`
+  NavbarLinksWrapper: styled.div`
     display: flex;
     justify-content: space-between;
 
@@ -133,46 +144,57 @@ export const navigationMenuStyles = {
     }
   `,
 
-  NavLink: styled(Link)`
+  NavLinksWrapper: styled.div`
     display: flex;
     align-items: center;
+    text-align: center;
 
     @media ${device.mobile} {
-      white-space: nowrap;
-      padding: ${pxToRem(9)};
-      border-radius: ${pxToRem(6)};
-
-      background-color: var(--gray-300);
-      color: var(--primary);
-    }
-
-    :first-child {
-      gap: ${pxToRem(10)};
       svg {
-        @media ${device.mobile} {
-          display: none;
-        }
-      }
-    }
-
-    :last-child {
-      svg {
-        path {
-          fill: var(--gray-500);
-        }
-
-        @media ${device.mobile} {
-          display: none;
-        }
+        display: none;
       }
     }
   `,
+  LinksList: styled.ul`
+    display: flex;
 
-  NavTextLink: styled.p`
+    @media ${device.mobile} {
+      gap: ${pxToRem(3)};
+    }
+  `,
+
+  NavLink: styled.li`
+    display: flex;
+    align-items: center;
+
+    margin-right: ${pxToRem(25)};
+
+    @media ${device.mobile} {
+      margin: 0;
+      white-space: nowrap;
+      padding: ${pxToRem(9)};
+
+      background-color: var(--gray-200);
+      border-radius: ${pxToRem(6)};
+      color: var(--primary);
+    }
+  `,
+
+  NavTextLink: styled(Link)`
     font-weight: 500;
 
     @media ${device.mobile} {
       font-weight: 400;
+    }
+  `,
+  HelpSelect: styled(SelectComponent)`
+    & .Select__control {
+      border: none;
+      font-weight: 500;
+    }
+
+    @media ${device.mobile} {
+      display: none;
     }
   `,
 
@@ -185,10 +207,28 @@ export const navigationMenuStyles = {
     }
   `,
 
+  ShippingSelectWrapper: styled.div`
+    display: flex;
+    align-items: center;
+  `,
+
+  FlagWrapper: styled.div`
+    height: ${pxToRem(17)};
+    width: ${pxToRem(24)};
+
+    svg {
+      height: ${pxToRem(17)};
+      width: ${pxToRem(24)};
+    }
+  `,
+
   NavSelect: styled(SelectComponent)`
     & .Select__control {
       border: none;
     }
+  `,
+  NavbarContainer: styled(Container)`
+    padding-right: 0;
   `,
 };
 
@@ -204,6 +244,7 @@ export const mobileStyles = {
       gap: ${pxToRem(20)};
     }
   `,
+  MobileLink: styled(Link)``,
 
   MobileSearch: styled(Input)`
     display: none;
@@ -211,9 +252,9 @@ export const mobileStyles = {
     @media ${device.mobile} {
       display: block;
       position: relative;
+
       background-color: var(--gray-100);
       color: var(--gray-500);
-      
     }
   `,
 };

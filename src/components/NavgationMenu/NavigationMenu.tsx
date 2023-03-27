@@ -8,27 +8,28 @@ import {
 import { Category } from "@/types/types";
 import { Container } from "@/styles/_common";
 import { Burger } from "../UI/Burger/Burger";
-import { languageOptions, deliveryOptions } from "./data";
+import {
+  languageOptions,
+  deliveryOptions,
+  linksOptions,
+  navBarOptions,
+  helpOptions,
+} from "./data";
+import { createElement, useState } from "react";
 
-import LogoSvg from "../../assets/svg/icon/general/logo.svg";
-import ProfileSvg from "../../assets/svg/icon/control/profile.svg";
-import MessageSvg from "../../assets/svg/icon/control/message.svg";
-import OrdersSvg from "../../assets/svg/icon/control/orders_heart.svg";
-import MyCartSvg from "../../assets/svg/icon/control/my_cart.svg";
-
-import MobileCartSvg from "../../assets/svg/icon/general/shopping_cart.svg";
-import MobilePersonSvg from "../../assets/svg/icon/control/person.svg";
-
-import MenuSvg from "../../assets/svg/icon/control/menu.svg";
-import ArrowDownSvg from "../../assets/svg/icon/control/expand_more.svg";
+import LogoSvg from "@/assets/svg/icon/general/logo.svg";
+import MobileCartSvg from "@/assets/svg/icon/general/shopping_cart.svg";
+import MobilePersonSvg from "@/assets/svg/icon/control/person.svg";
+import MenuSvg from "@/assets/svg/icon/control/menu.svg";
 
 export const NavigationMenu = ({ categories }: Category) => {
+  const [languageFlag, setLanguageFlag] = useState(deliveryOptions[0].icon);
+
   return (
     <>
+      <Burger />
       <Container>
         <S.HeaderWrapper>
-          <Burger />
-
           <S.LogoWrapper href="">
             <LogoSvg />
           </S.LogoWrapper>
@@ -47,83 +48,73 @@ export const NavigationMenu = ({ categories }: Category) => {
             <S.Button visual="right">Search</S.Button>
           </S.HeaderSearchWrapper>
 
-          <S.LinksWrapper>
-            <S.HeaderLink href="">
-              <ProfileSvg />
-              <S.TextLink>Profile</S.TextLink>
-            </S.HeaderLink>
-
-            <S.HeaderLink href="">
-              <MessageSvg />
-              <S.TextLink>Message</S.TextLink>
-            </S.HeaderLink>
-
-            <S.HeaderLink href="">
-              <OrdersSvg />
-              <S.TextLink>Orders</S.TextLink>
-            </S.HeaderLink>
-
-            <S.HeaderLink href="">
-              <MyCartSvg />
-              <S.TextLink>My cart</S.TextLink>
-            </S.HeaderLink>
-          </S.LinksWrapper>
+          <S.HeaderLinksWrapper>
+            {linksOptions.map((link) => (
+              <S.HeaderLink key={link.value}>
+                <S.IconLink>{createElement(link.icon)}</S.IconLink>
+                <S.TextLink href="">{link.label}</S.TextLink>
+              </S.HeaderLink>
+            ))}
+          </S.HeaderLinksWrapper>
 
           <M.MobileLinksWrapper>
-            <S.HeaderLink href="">
+            <M.MobileLink href="">
               <MobileCartSvg />
-            </S.HeaderLink>
+            </M.MobileLink>
 
-            <S.HeaderLink href="">
+            <M.MobileLink href="">
               <MobilePersonSvg />
-            </S.HeaderLink>
+            </M.MobileLink>
           </M.MobileLinksWrapper>
         </S.HeaderWrapper>
         <M.MobileSearch placeholder="Search" />
       </Container>
 
       <S.NavbarWrapper>
-        <Container>
-          <S.NavLinksWrapper>
-            <S.NavbarLinksWrapper>
-              <S.NavLink href="">
+        <S.NavbarContainer>
+          <S.NavbarLinksWrapper>
+            <S.NavLinksWrapper>
+              <S.SVGWrapper>
                 <MenuSvg />
-                <S.NavTextLink>All Categories</S.NavTextLink>
-              </S.NavLink>
-              <S.NavLink href="">
-                <S.NavTextLink>Hot offers</S.NavTextLink>
-              </S.NavLink>
-              <S.NavLink href="">
-                <S.NavTextLink>Gift boxes</S.NavTextLink>
-              </S.NavLink>
-              <S.NavLink href="">
-                <S.NavTextLink>Projects</S.NavTextLink>
-              </S.NavLink>
-              <S.NavLink href="">
-                <S.NavTextLink>Menu item</S.NavTextLink>
-              </S.NavLink>
-              <S.NavLink href="">
-                <S.NavTextLink>Help</S.NavTextLink>
-                <ArrowDownSvg />
-              </S.NavLink>
-            </S.NavbarLinksWrapper>
-
+              </S.SVGWrapper>
+              <S.LinksList>
+                {navBarOptions.map((link) => {
+                  return (
+                    <S.NavLink key={link.value}>
+                      <S.NavTextLink href="">{link.label}</S.NavTextLink>
+                    </S.NavLink>
+                  );
+                })}
+              </S.LinksList>
+              <S.HelpSelect
+                classNamePrefix="Select"
+                placeholder="Help"
+                isSearchable={false}
+                options={helpOptions}
+                onChange={(e) => console.log(e)}
+              />
+            </S.NavLinksWrapper>
             <S.NavSelectWrapper>
               <S.NavSelect
                 classNamePrefix="Select"
+                isSearchable={false}
                 placeholder={`${languageOptions[0].label}`}
                 options={languageOptions}
                 onChange={(e) => console.log(e)}
               />
-              <S.NavSelect
-                classNamePrefix="Select"
-                placeholder={`${deliveryOptions[0].label}`}
-                options={deliveryOptions}
-                onChange={(e) => console.log(e)}
-              />
+              <S.ShippingSelectWrapper>
+                <S.FlagWrapper>{languageFlag}</S.FlagWrapper>
+                <S.NavSelect
+                  classNamePrefix="Select"
+                  isSearchable={false}
+                  placeholder={`${deliveryOptions[0].label}`}
+                  options={deliveryOptions}
+                  onChange={(value) => setLanguageFlag(value?.icon)}
+                />
+              </S.ShippingSelectWrapper>
             </S.NavSelectWrapper>
-          </S.NavLinksWrapper>
-        </Container>
+          </S.NavbarLinksWrapper>
+        </S.NavbarContainer>
       </S.NavbarWrapper>
     </>
   );

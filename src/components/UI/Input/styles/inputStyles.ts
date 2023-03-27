@@ -103,6 +103,5 @@ export const inputStyles = {
   Hint: styled.span`
     font-size: var(--text-xxs);
     color: var(--warning);
-    padding: ${pxToRem(2)};
   `,
 };

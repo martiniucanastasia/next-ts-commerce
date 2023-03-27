@@ -5,9 +5,9 @@ import { OptionType, SelectProps } from "./types";
 export function SelectComponent<T>({
   options,
   placeholder,
-  isSearchable = true,
   className,
   classNamePrefix,
+  isSearchable = true,
   onChange,
   ...props
 }: SelectProps<T>) {
