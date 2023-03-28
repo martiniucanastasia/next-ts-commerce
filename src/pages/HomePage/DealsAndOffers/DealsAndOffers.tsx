@@ -1,15 +1,32 @@
 "use client";
 
-import { Container } from "@/styles/_common";
 import { Product } from "@/types/types";
-import { getRandomNumber, getTime } from "@/helpers/utils";
+import { useEffect, useState } from "react";
 import { dealsAndOffersStyles as S } from "./styles/dealsAndOffersStyles";
-import { createElement, useEffect, useState } from "react";
 import Image from "next/image";
 
-export interface DealsAndOffersProps {
+interface DealsAndOffersProps {
   products: Product[];
 }
+
+type RandomNumberGenerator = (min: number, max: number) => string;
+
+const getRandomNumber: RandomNumberGenerator = (min, max) => {
+  const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+
+  if (randomNum < 10) {
+    return `0${randomNum}`;
+  } else {
+    return randomNum.toString();
+  }
+};
+
+const getTime = () => {
+  const today = new Date();
+  const time =
+    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  return time;
+};
 
 export const DealsAndOffers = ({ products }: DealsAndOffersProps) => {
   const [day, setDay] = useState("");
@@ -17,16 +34,38 @@ export const DealsAndOffers = ({ products }: DealsAndOffersProps) => {
   const [salePercentage, setSalePercentage] = useState("");
 
   useEffect(() => {
-    setDay(getRandomNumber(1, 10));
     setTime(getTime());
-    setSalePercentage(getRandomNumber(10, 50));
+    setDay(getRandomNumber(1, 10));
+    setSalePercentage(getRandomNumber(10, 40));
   }, []);
 
   const splittedTime = time.split(":");
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const [hour, min, sec] = splittedTime;
+
+      if (parseInt(sec) > 0) {
+        splittedTime[2] = (parseInt(sec) - 1).toString();
+      } else if (parseInt(min) > 0) {
+        splittedTime[1] = (parseInt(min) - 1).toString();
+        splittedTime[2] = "59";
+      } else if (parseInt(hour) > 0) {
+        splittedTime[0] = (parseInt(hour) - 1).toString();
+        splittedTime[1] = "59";
+        splittedTime[2] = "59";
+      } else {
+        clearInterval(interval);
+      }
+
+      setTime(splittedTime.join(":"));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [time]);
+
   return (
-    <Container>
-      <br />
+    <S.DealsAndOffersContainer>
       <S.GeneralWrapper>
         <S.DealsAndOffersWrapper>
           <S.DealsAndOffersInfoWrapper>
@@ -39,6 +78,7 @@ export const DealsAndOffers = ({ products }: DealsAndOffersProps) => {
               <S.CountNumber>{day}</S.CountNumber>
               <S.CountValue>Days</S.CountValue>
             </S.Countdown>
+
             <S.Countdown>
               <S.CountNumber>{splittedTime[0]}</S.CountNumber>
               <S.CountValue>Hour</S.CountValue>
@@ -55,7 +95,7 @@ export const DealsAndOffers = ({ products }: DealsAndOffersProps) => {
         </S.DealsAndOffersWrapper>
 
         <S.ProductsWrapper className="Products">
-          {products.slice(0, 15).map((item) => {
+          {products.slice(0, 10).map((item) => {
             return (
               <S.ProductWrapper key={item.id}>
                 <Image
@@ -71,6 +111,6 @@ export const DealsAndOffers = ({ products }: DealsAndOffersProps) => {
           })}
         </S.ProductsWrapper>
       </S.GeneralWrapper>
-    </Container>
+    </S.DealsAndOffersContainer>
   );
 };
