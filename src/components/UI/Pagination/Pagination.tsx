@@ -55,6 +55,7 @@ export const Pagination = ({
               isSearchable={false}
               isClearable={false}
               onChange={(obj) => {
+               // @ts-expect-error
                 setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
                 setCurrentPage({ value: 1 });
               }}
