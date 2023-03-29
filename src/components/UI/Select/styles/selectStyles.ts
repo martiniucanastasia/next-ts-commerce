@@ -2,7 +2,11 @@ import { GroupBase, StylesConfig } from "react-select";
 import { OptionType } from "../types";
 
 // @ts-expect-error
+<<<<<<< HEAD
+export const selectStyles: StylesConfig<OptionType<T> | null, boolean> = {
+=======
 export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase<OptionType<T> | null>> | undefined = {
+>>>>>>> main
   control: (base, state) => {
     return {
       ...base,
@@ -16,7 +20,11 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase
       cursor: "pointer",
     };
   },
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> main
   placeholder: (provided) => ({
     ...provided,
     color: "var(--gray-700)",
@@ -29,7 +37,6 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase
     marginTop: 0,
     color: "var(--gray-700)",
     fontSize: "var(--text-s)",
-    fontWidth: "400",
   }),
 
   menuList: (base) => ({
@@ -55,6 +62,11 @@ export const selectStyles: StylesConfig<OptionType<T> | null, boolean, GroupBase
     "&:focus": {
       outline: "none",
     },
+  }),
+
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingRight: 0,
   }),
 
   option: (styles, { isSelected, isFocused }) => {
