@@ -9,23 +9,26 @@ export function SelectComponent<T>({
   classNamePrefix,
   isSearchable = true,
   onChange,
-}: SelectProps<T>) {
+  ...props
+}: SelectProps<T, OptionType<T>>) {
   const handleChange = (selectedOption: OptionType<T> | null) => {
     onChange(selectedOption);
   };
 
   return (
     <Select<OptionType<T> | null>
-      className={className}
-      classNamePrefix={classNamePrefix}
       instanceId="select-box-id"
+      menuPlacement="auto"
       onChange={handleChange}
       options={options}
+      className={className}
+      classNamePrefix={classNamePrefix}
       placeholder={placeholder}
+      // @ts-expect-error
       styles={selectStyles}
       isClearable={false}
       isSearchable={isSearchable}
-      menuPlacement="auto"
+      {...props}
     />
   );
 }

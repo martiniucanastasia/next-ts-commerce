@@ -7,11 +7,12 @@ export const Input = ({
   button,
   label,
   visual,
+  className,
   hint = { message: "", position: "bottom" },
 }: InputProps) => {
   return (
     <>
-      <S.GeneratWrapper>
+      <S.GeneralWrapper>
         {label && <S.Label>{label}</S.Label>}
         {hint?.position === "top" && <S.Hint>{hint.message}</S.Hint>}
 
@@ -19,13 +20,18 @@ export const Input = ({
           <S.Textarea rows={5} cols={30} placeholder={placeholder} />
         ) : (
           <S.InputWrapper>
-            <S.Input type="text" placeholder={placeholder} visual={visual} />
+            <S.Input
+              type="text"
+              placeholder={placeholder}
+              visual={visual}
+              className={className}
+            />
             {button && <>{button}</>}
           </S.InputWrapper>
         )}
 
         {hint?.position === "bottom" && <S.Hint>{hint.message}</S.Hint>}
-      </S.GeneratWrapper>
+      </S.GeneralWrapper>
     </>
   );
 };
