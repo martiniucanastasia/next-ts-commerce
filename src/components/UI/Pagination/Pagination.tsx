@@ -4,14 +4,13 @@ import {
 } from "./styles/paginationStyles";
 
 import { SelectComponent } from "../Select/Select";
-import { OptionType } from "../Select/types";
 import { PaginationProps } from "./types";
 
 import ArrowLeft from "../../../assets/svg/icon/control/chevron_left.svg";
 import ArrowRight from "../../../assets/svg/icon/control/chevron_right.svg";
 import { useEffect, useState } from "react";
 
-export const SELECT_PAGE_RANGES: OptionType<number>[] = [
+export const SELECT_PAGE_RANGES = [
   { value: 10, label: "Show 10" },
   { value: 15, label: "Show 15" },
   { value: 20, label: "Show 20" },
@@ -50,12 +49,13 @@ export const Pagination = ({
       <S.PaginationWrapper>
         {withSelect && (
           <S.SelectWrapper>
-            <SelectComponent<number>
+            <SelectComponent
               placeholder={`Show ${perPage}`}
               options={SELECT_PAGE_RANGES}
               isSearchable={false}
               isClearable={false}
               onChange={(obj) => {
+               // @ts-expect-error
                 setPerPage(obj?.value || SELECT_PAGE_RANGES[0].value);
                 setCurrentPage({ value: 1 });
               }}

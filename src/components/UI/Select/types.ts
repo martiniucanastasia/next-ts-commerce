@@ -1,19 +1,13 @@
-import { GroupBase, Props } from "react-select";
+export interface Option {
+  label: string;
+  value: string | number;
+  icon?: any;
+}
 
-export type OptionType<T> = { value: T; label: string; icon?: any };
+export interface GroupOption {
+  label: string;
+  value: Option[];
+  icon?: any;
+}
 
-export type SelectProps<
-  T,
-  Option,
-  IsMulti extends boolean = false,
-  Group extends GroupBase<Option> = GroupBase<Option>
-> = Props<Option, IsMulti, Group> & {
-  
-  options: OptionType<T>[];
-  placeholder?: string;
-  className?: string;
-  classNamePrefix?: string;
-  isSearchable?: boolean;
-  isClearable?: boolean;
-  onChange: (option: OptionType<T> | null) => void;
-};
+export type OptionType = Option | GroupOption;
