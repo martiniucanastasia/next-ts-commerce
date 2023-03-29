@@ -15,7 +15,7 @@ export const selectStyles: StylesConfig<OptionType> = {
       cursor: "pointer",
     };
   },
-
+  
   placeholder: (provided) => ({
     ...provided,
     color: "var(--gray-700)",
@@ -28,7 +28,6 @@ export const selectStyles: StylesConfig<OptionType> = {
     marginTop: 0,
     color: "var(--gray-700)",
     fontSize: "var(--text-s)",
-    fontWidth: "400",
   }),
 
   menuList: (base) => ({
@@ -56,6 +55,11 @@ export const selectStyles: StylesConfig<OptionType> = {
     },
   }),
 
+  valueContainer: (provided) => ({
+    ...provided,
+    paddingRight: 0,
+  }),
+
   option: (styles, { isSelected, isFocused }) => {
     return {
       ...styles,
@@ -67,11 +71,6 @@ export const selectStyles: StylesConfig<OptionType> = {
       },
     };
   },
-
-  valueContainer: (provided) => ({
-    ...provided,
-    paddingRight: 0,
-  }),
 
   noOptionsMessage: (provided) => ({
     ...provided,
