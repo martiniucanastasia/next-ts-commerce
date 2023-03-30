@@ -10,3 +10,8 @@ export type Product = {
   verified: boolean;
   image: string;
 };
+
+export type currentOffer = {
+  value: number;
+  label: string;
+}[];

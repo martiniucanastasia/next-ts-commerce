@@ -438,5 +438,23 @@
             "id": 3,
             "name": "Home"
         }
+    ], 
+    "currentOffer": [
+        {
+            "value": 3,
+            "label": "Days" 
+        },
+        {
+            "value": 24,
+             "label": "Hour" 
+        },
+        {
+            "value": 60, 
+            "label": "Min" 
+        },
+        {
+            "value": 60, 
+            "label": "Sec" 
+        }
     ]
 }

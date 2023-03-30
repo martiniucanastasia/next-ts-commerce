@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container, pxToRem } from "@/styles/_common";
 import { device } from "@/styles/_sizes";
+import Link from "next/link";
 
 export const dealsAndOffersStyles = {
   DealsAndOffersContainer: styled(Container)`
@@ -13,14 +14,13 @@ export const dealsAndOffersStyles = {
 
     border: 1px solid var(--gray-300);
     border-radius: ${pxToRem(6)};
+    margin-bottom: ${pxToRem(22)};
+
+    background-color: white;
 
     @media ${device.mobileS} {
       flex-direction: column;
-
-      border-width: ${pxToRem(10)} 0 ${pxToRem(10)} 0;
-      border-radius: 0;
-      border-style: solid;
-      border-color: var(--gray-100);
+      margin-bottom: ${pxToRem(10)} 0;
     }
   `,
 
@@ -50,9 +50,6 @@ export const dealsAndOffersStyles = {
   `,
 
   DealsAndOffersTitle: styled.h4`
-    font-size: var(--text-l);
-    font-weight: 600;
-
     @media ${device.mobileXXS} {
       font-size: var(--text-m);
     }
@@ -79,7 +76,7 @@ export const dealsAndOffersStyles = {
 
     background-color: var(--gray-600);
     color: white;
-
+    
     min-width: ${pxToRem(45)};
     border-radius: ${pxToRem(4)};
     padding: ${pxToRem(8)};
@@ -99,6 +96,12 @@ export const dealsAndOffersStyles = {
     }
   `,
 
+  ExpiredAlert: styled.p`
+    font-weight: 500;
+    color: var(--danger);
+    text-align: center;
+  `,
+
   CountNumber: styled.p`
     font-weight: 700;
 
@@ -107,15 +110,14 @@ export const dealsAndOffersStyles = {
     }
   `,
 
-  CountValue: styled.span`
+  CountLabel: styled.span`
     font-size: var(--text-xxs);
   `,
 
   ProductsWrapper: styled.div`
     display: flex;
 
-    width: 100%;
-    overflow-y: auto;
+    overflow-x: auto;
 
     @media ${device.mobileS} {
       border-width: 1px 0 1px 0;
@@ -124,16 +126,14 @@ export const dealsAndOffersStyles = {
     }
   `,
 
-  ProductWrapper: styled.div`
+  ProductWrapper: styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
 
     max-width: ${pxToRem(179)};
 
-    border-width: 0 1px 0 0;
-    border-style: solid;
-    border-color: var(--gray-300);
+    border-right: 1px solid var(--gray-300);
 
     padding: ${pxToRem(8)} ${pxToRem(20)} ${pxToRem(17)} ${pxToRem(20)};
 
@@ -153,7 +153,7 @@ export const dealsAndOffersStyles = {
   `,
 
   SaleWrapper: styled.div`
-    width: ${pxToRem(60)};
+    text-align: center;
 
     background-color: var(--danger-100);
     color: var(--danger);
