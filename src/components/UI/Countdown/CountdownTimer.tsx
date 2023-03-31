@@ -2,28 +2,34 @@ import { useCountdown } from "@/hooks/useCountdown";
 import { DateTimeDisplay } from "./DataTimeDisplay";
 import { dealsAndOffersStyles as S } from "@/pages/HomePage/DealsAndOffers/styles/dealsAndOffersStyles";
 import { currentOffer } from "@/types/types";
+// import { useEffect, useMemo } from "react";
 
 const NOW_IN_MS = new Date().getTime();
+
+const differenceInTime = new Date("04/15/2023").getTime() - NOW_IN_MS;
+
+// const getDiffTime = (targetDate: number) => {
+//   let differenceInTime = targetDate - NOW_IN_MS;
+//   return differenceInTime;
+// };
 
 const ShowCounter = ({
   days,
   hours,
   minutes,
   seconds,
-  labels,
 }: {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
-  labels: string[];
 }) => {
   return (
     <S.CountdownWrapper>
-      <DateTimeDisplay value={days} type={labels[0]} />
-      <DateTimeDisplay value={hours} type={labels[1]} />
-      <DateTimeDisplay value={minutes} type={labels[2]} />
-      <DateTimeDisplay value={seconds} type={labels[3]} />
+      <DateTimeDisplay value={days} type={"Days"} />
+      <DateTimeDisplay value={hours} type={"Hour"} />
+      <DateTimeDisplay value={minutes} type={"Min"} />
+      <DateTimeDisplay value={seconds} type={"Sec"} />
     </S.CountdownWrapper>
   );
 };
@@ -33,23 +39,24 @@ export const CountdownTimer = ({
 }: {
   targetData: currentOffer;
 }) => {
-  const timeFromServer = (targetData: currentOffer) => {
-    return targetData.map((item: any) => item[Object.keys(item)[0]]);
-  };
+  // const differenceInTimeMemo = useMemo(() => {
+  //   const differenceInTime = new Date(targetData.value).getTime() - NOW_IN_MS;
+  //   return differenceInTime;
+  // }, [NOW_IN_MS]);
 
-  const labelsFromServer = (targetData: currentOffer) => {
-    return targetData.map((item: any) => item[Object.keys(item)[1]]);
-  };
+  // or this one
 
-  const multiplyOfferTime = (array: number[]) => {
-    return array.reduce((acc: number, curr: number) => acc * curr, 1) * 1000;
-  };
+  // const differenceInTimeMemo = useMemo(() => {
+  //   return getDiffTime(new Date(targetData.value).getTime());
+  // }, []);
 
-  const targetDate = NOW_IN_MS + multiplyOfferTime(timeFromServer(targetData));
+  const targetDate = NOW_IN_MS + differenceInTime;
 
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
-  if (days + hours + minutes + seconds <= 0) {
+  let isExpired = false;
+
+  if (isExpired) {
     return (
       <S.ExpiredAlert>
         Offer is expired! Come back soon for new deals! &#128523;
@@ -58,7 +65,6 @@ export const CountdownTimer = ({
   } else {
     return (
       <ShowCounter
-        labels={labelsFromServer(targetData)}
         days={days}
         hours={hours}
         minutes={minutes}

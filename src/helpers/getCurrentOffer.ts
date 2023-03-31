@@ -1,5 +1,5 @@
-export async function getCurrentOffer() {
-  const response = await fetch(`http://localhost:4000/currentOffer`, {
+export async function getCurrentOffer(id: number) {
+  const response = await fetch(`http://localhost:4000/offers/${id}`, {
     cache: "no-store",
   });
   return response.json();

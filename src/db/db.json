@@ -439,22 +439,22 @@
             "name": "Home"
         }
     ], 
-    "currentOffer": [
+    "offers": [
         {
-            "value": 3,
-            "label": "Days" 
+            "id": 1,
+            "value": "04/15/2023" 
         },
         {
-            "value": 24,
-             "label": "Hour" 
+            "id": 2,
+            "value": "06/05/2023" 
         },
         {
-            "value": 60, 
-            "label": "Min" 
+            "id": 3,
+            "value": "07/06/2023" 
         },
         {
-            "value": 60, 
-            "label": "Sec" 
+            "id": 2,
+            "value": "08/06/2023" 
         }
     ]
 }

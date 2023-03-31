@@ -6,7 +6,7 @@ import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
 
 export default async function Page() {
   const products: Product[] = await getProducts();
-  const currentOffer: currentOffer = await getCurrentOffer();
+  const currentOffer: currentOffer = await getCurrentOffer(1);
 
   return (
     <>

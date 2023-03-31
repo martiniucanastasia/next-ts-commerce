@@ -12,6 +12,7 @@ export type Product = {
 };
 
 export type currentOffer = {
-  value: number;
-  label: string;
-}[];
+  id: number;
+  value: string;
+};
+
