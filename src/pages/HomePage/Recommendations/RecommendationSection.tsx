@@ -9,7 +9,7 @@ const ProductsRow = ({ products }: { products: Product[] }) => {
     <S.RecommendProductsWrapper>
       {products.slice(0, 10).map((item) => {
         return (
-          <S.ProductWrapper key={item.id}>
+          <S.ProductWrapper key={item.id} href="/">
             <Image src={item.image} width={200} height={200} alt={item.name} />
             <S.ProductInfoBlock>
               <S.ProductPrice>${item.price}</S.ProductPrice>

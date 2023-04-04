@@ -1,6 +1,7 @@
 import { Container } from "@/styles/_common";
 import { device } from "@/styles/_sizes";
 import { pxToRem } from "@/styles/_common";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const recommendationSectionStyles = {
@@ -29,7 +30,7 @@ export const recommendationSectionStyles = {
     }
   `,
 
-  ProductWrapper: styled.div`
+  ProductWrapper: styled(Link)`
     max-width: ${pxToRem(220)};
     height: ${pxToRem(310)};
 
