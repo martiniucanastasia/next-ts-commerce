@@ -52,3 +52,10 @@ export type BurgerContents = {
     label: string;
   }[];
 };
+
+export type Suppliers = {
+  value: string;
+  label: string;
+  site: string;
+  icon: any;
+}[];

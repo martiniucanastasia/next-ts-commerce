@@ -546,5 +546,67 @@
                 "label": "Privacy policy"
             }
         ]
-    }
+    },
+    "suppliers": [
+        {
+            "value": "Arabic Emirates",
+            "label": "Arabic Emirates",
+            "site": "shopname.ae",
+            "icon": "/arabic_flag.svg"
+        },
+        {
+            "value": "Australia",
+            "label": "Australia",
+            "site": "shopname.ae",
+            "icon": "/australia_flag.svg"
+        },
+        {
+            "value": "United States",
+            "label": "United States",
+            "site": "shopname.ae",
+            "icon": "/usa_flag.svg"
+        },
+        {
+            "value": "Russia",
+            "label": "Russia",
+            "site": "shopname.ru",
+            "icon": "/russia_flag.svg"
+        }
+        ,{
+            "value": "Italy",
+            "label": "Italy",
+            "site": "shopname.it",
+            "icon": "/italy_flag.svg"
+        },
+        {
+            "value": "Denmark",
+            "label": "Denmark",
+            "site": "shopname.com.dk",
+            "icon": "/dk_flag.svg"
+        },
+        {
+            "value": "France",
+            "label": "France",
+            "site": "shopname.com.fr",
+            "icon": "/france_flag.svg"
+        },
+        {
+            "value": "Germany",
+            "label": "Germany",
+            "site": "shopname.ae",
+            "icon": "/germany_flag.svg"
+        },
+        {
+            "value": "China",
+            "label": "China",
+            "site": "shopname.ae",
+            "icon": "/china_flag.svg"
+        },
+        {
+            "value": "Great Britain",
+            "label": "Great Britain",
+            "site": "shopname.co.uk",
+            "icon": "/uk_flag.svg"
+        }
+    ]
 }
