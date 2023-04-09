@@ -3,9 +3,16 @@
 import { currentOffer, Product } from "@/types/types";
 import { useEffect, useState } from "react";
 import { dealsAndOffersStyles as S } from "./styles/dealsAndOffersStyles";
-import { CountdownTimer } from "@/components/UI/Countdown/CountdownTimer";
 import { getRandomNumber } from "@/utils/utils";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const CountdownTimer = dynamic(
+  () => import("../../../components/UI/Countdown/CountdownTimer"),
+  {
+    ssr: false,
+  }
+);
 
 interface DealsAndOffersProps {
   products: Product[];
@@ -16,7 +23,6 @@ export const DealsAndOffers = ({
   products,
   currentOffer,
 }: DealsAndOffersProps) => {
-
   const [salePercentage, setSalePercentage] = useState(0);
 
   useEffect(() => {
