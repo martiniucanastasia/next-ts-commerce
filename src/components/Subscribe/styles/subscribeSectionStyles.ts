@@ -19,7 +19,7 @@ export const subscribeSectionStyles = {
   SubscribeText: styled.p`
     color: var(--gray-600);
 
-    padding: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
+    margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
   `,
 
   SubscribeInput: styled(Input)`
