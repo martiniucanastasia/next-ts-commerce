@@ -1,16 +1,17 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu";
 import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
+import { SubscribeSection } from "@/components/Subscribe/SubscribeSection";
+import { Footer } from "@/components/Footer/Footer";
 
 import { getCategories } from "@/helpers/getCategories";
 import { getLanguages } from "../helpers/getLanguage";
 import { getShippingInfo } from "../helpers/getShippingInfo";
 import { getHeaderLinks } from "@/helpers/getHeaderLinks";
 import { getBurgerData } from "@/helpers/getBurgerData";
-import { getProducts} from "@/helpers/getProducts";
+import { getProducts } from "@/helpers/getProducts";
 import { getCurrentOffer } from "@/helpers/getCurrentOffer";
 
 import { Product, currentOffer } from "@/types/types";
-
 
 export default async function Page() {
   const categories = await getCategories();
@@ -33,6 +34,8 @@ export default async function Page() {
       />
       {/* // INTRO SECTION */}
       <DealsAndOffers products={products} currentOffer={currentOffer} />
+      <SubscribeSection />
+      <Footer languages={languages} />
     </>
   );
 }
