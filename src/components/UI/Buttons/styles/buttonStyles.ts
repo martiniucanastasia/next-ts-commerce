@@ -60,7 +60,7 @@ export const getVariantStyles = ({
     primary: css`
       color: white;
       background-image: linear-gradient(
-        to right,
+        to left,
         rgba(18, 127, 255, 1) 0%,
         rgba(0, 103, 255, 1) 100%
       );
