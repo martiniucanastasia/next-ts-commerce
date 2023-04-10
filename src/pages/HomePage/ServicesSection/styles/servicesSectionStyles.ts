@@ -33,7 +33,7 @@ export const servicesSectionStyles = {
     background-color: white;
 
     border-radius: ${pxToRem(6)};
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-300);
   `,
 
   BlockText: styled.p`
@@ -45,13 +45,20 @@ export const servicesSectionStyles = {
   IconWrapper: styled.div`
     position: absolute;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     right: ${pxToRem(20)};
-    top: 45%;
+    top: ${pxToRem(92)};
+
+    width: ${pxToRem(55)};
+    height: ${pxToRem(55)};
 
     background-color: var(--primary-100);
     border-radius: 50%;
     border: 2px solid white;
-    
+
     padding: ${pxToRem(15)};
   `,
 };
