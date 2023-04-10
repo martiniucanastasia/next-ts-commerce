@@ -13,10 +13,26 @@ ${fontStyles}
   body {
     margin: 0;
     font-family: var(--font-primary), sans-serif, Tahoma;
+    background-color: var(--gray-100);
   }
   
   h1, h2, h3, h4, h5 {
     margin: 0;
+  }
+
+  h2 {
+    font-size: var(--text-xxl);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--text-l);
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: var(--text-xl);
+    font-weight: 600;
   }
 
   html, body {
