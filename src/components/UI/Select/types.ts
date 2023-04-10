@@ -1,9 +1,13 @@
-export type OptionType<T> = { value: T; label: string };
-
-export interface SelectProps<T> {
-  options: OptionType<T>[];
-  placeholder?: string;
-  isSearchable?: boolean;
-  isClearable?: boolean;
-  onChange: (option: OptionType<T> | null) => void;
+export interface Option {
+  label: string;
+  value: string | number;
+  icon?: any;
 }
+
+export interface GroupOption {
+  label: string;
+  value: Option[];
+  icon?: any;
+}
+
+export type OptionType = Option | GroupOption;
