@@ -9,8 +9,8 @@
             "seller": "Speech Pathologist",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
-            "image": "/cloth_01.jpg"
+            "verified": true,
+            "image": "/assets/cloths/cloth_01.jpg"
         },
         {
             "id": 2,
@@ -21,8 +21,8 @@
             "seller": "Software Test Engineer II",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
-            "image": "/cloth_02.jpg"
+            "verified": true,
+            "image": "/assets/cloths/cloth_02.jpg"
         },
         {
             "id": 3,
@@ -33,8 +33,8 @@
             "seller": "Assistant Media Planner",
             "brand": "H&M",
             "condition": "New",
-            "verified" : true,
-            "image": "/cloth_03.jpg"
+            "verified": true,
+            "image": "/assets/cloths/cloth_03.jpg"
         },
         {
             "id": 4,
@@ -45,8 +45,8 @@
             "seller": "Paralegal",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
-            "image": "/cloth_04.jpg"
+            "verified": false,
+            "image": "/assets/cloths/cloth_04.jpg"
         },
         {
             "id": 5,
@@ -57,8 +57,8 @@
             "seller": "Help Desk Technician",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
-            "image": "/cloth_05.jpg"
+            "verified": true,
+            "image": "/assets/cloths/cloth_05.jpg"
         },
         {
             "id": 6,
@@ -69,8 +69,8 @@
             "seller": "Teacher",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
-            "image": "/cloth_06.jpg"
+            "verified": false,
+            "image": "/assets/cloths/cloth_06.jpg"
         },
         {
             "id": 7,
@@ -81,8 +81,8 @@
             "seller": "Project Manager",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
-            "image": "/cloth_07.jpg"
+            "verified": false,
+            "image": "/assets/cloths/cloth_07.jpg"
         },
         {
             "id": 8,
@@ -93,8 +93,8 @@
             "seller": "Analog Circuit Design manager",
             "brand": "GoPro",
             "condition": "New",
-            "verified" : true,
-            "image": "/tech_01.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_01.jpg"
         },
         {
             "id": 9,
@@ -105,8 +105,8 @@
             "seller": "Administrative Officer",
             "brand": "Apple",
             "condition": "New",
-            "verified" : true,
-            "image": "/tech_02.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_02.jpg"
         },
         {
             "id": 10,
@@ -117,8 +117,8 @@
             "seller": "Software Test Engineer II",
             "brand": "Xioami",
             "condition": "Old items",
-            "verified" : true,
-            "image": "/tech_03.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_03.jpg"
         },
         {
             "id": 11,
@@ -129,8 +129,8 @@
             "seller": "Social Worker",
             "brand": "Xioami",
             "condition": "New",
-            "verified" : false,
-            "image": "/tech_04.jpg"
+            "verified": false,
+            "image": "/assets/tech/tech_04.jpg"
         },
         {
             "id": 12,
@@ -141,8 +141,8 @@
             "seller": "Research Assistant I",
             "brand": "Apple",
             "condition": "Refurbished",
-            "verified" : true,
-            "image": "/tech_05.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_05.jpg"
         },
         {
             "id": 13,
@@ -153,8 +153,8 @@
             "seller": "Social Worker",
             "brand": "CosmicByte",
             "condition": "New",
-            "verified" : true,
-            "image": "/tech_06.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_06.jpg"
         },
         {
             "id": 14,
@@ -165,8 +165,8 @@
             "seller": "Information Systems Manager",
             "brand": "Canon",
             "condition": "New",
-            "verified" : true,
-            "image": "/tech_07.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_07.jpg"
         },
         {
             "id": 15,
@@ -177,8 +177,8 @@
             "seller": "Environmental Tech",
             "brand": "Apple",
             "condition": "Old items",
-            "verified" : false,
-            "image": "/tech_08.jpg"
+            "verified": false,
+            "image": "/assets/tech/tech_08.jpg"
         },
         {
             "id": 16,
@@ -189,8 +189,8 @@
             "seller": "Safety Technician IV",
             "brand": "Apple",
             "condition": "Refurbished",
-            "verified" : true,
-            "image": "/tech_09.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_09.jpg"
         },
         {
             "id": 17,
@@ -201,8 +201,8 @@
             "seller": "Programmer Analyst IV",
             "brand": "CosmicByte",
             "condition": "New",
-            "verified" : true,
-            "image": "/tech_10.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_10.jpg"
         },
         {
             "id": 18,
@@ -213,8 +213,8 @@
             "seller": "Systems Administrator III",
             "brand": "Xioami",
             "condition": "Refurbished",
-            "verified" : true,
-            "image": "/tech_11.jpg"
+            "verified": true,
+            "image": "/assets/tech/tech_11.jpg"
         },
         {
             "id": 19,
@@ -225,8 +225,8 @@
             "seller": "Social Worker",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : false,
-            "image": "/furn_01.jpg"
+            "verified": false,
+            "image": "/assets/furniture/furn_01.jpg"
         },
         {
             "id": 20,
@@ -237,8 +237,8 @@
             "seller": "Marketing Assistant",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
-            "image": "/furn_02.jpg"
+            "verified": false,
+            "image": "/assets/furniture/furn_02.jpg"
         },
         {
             "id": 21,
@@ -249,8 +249,8 @@
             "seller": "Chemical Engineer",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
-            "image": "/furn_03.jpg"
+            "verified": true,
+            "image": "/assets/furniture/furn_03.jpg"
         },
         {
             "id": 22,
@@ -261,8 +261,8 @@
             "seller": "Financial Advisor",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
-            "image": "/furn_04.jpg"
+            "verified": true,
+            "image": "/assets/furniture/furn_04.jpg"
         },
         {
             "id": 23,
@@ -273,8 +273,8 @@
             "seller": "Civil Engineer",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : true,
-            "image": "/furn_05.jpg"
+            "verified": true,
+            "image": "/assets/furniture/furn_05.jpg"
         },
         {
             "id": 24,
@@ -285,8 +285,8 @@
             "seller": "Internal Auditor",
             "brand": "Amazon Furniture",
             "condition": "IKEA",
-            "verified" : false,
-            "image": "/furn_06.jpg"
+            "verified": false,
+            "image": "/assets/furniture/furn_06.jpg"
         },
         {
             "id": 25,
@@ -297,8 +297,8 @@
             "seller": "Computer Systems Analyst I",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
-            "image": "/furn_07.jpg"
+            "verified": true,
+            "image": "/assets/furniture/furn_07.jpg"
         },
         {
             "id": 26,
@@ -309,8 +309,8 @@
             "seller": "Cost Accountant",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : false,
-            "image": "/other_01.jpg"
+            "verified": false,
+            "image": "/assets/other/other_01.jpg"
         },
         {
             "id": 27,
@@ -321,8 +321,8 @@
             "seller": "Human Resources Assistant I",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : true,
-            "image": "/other_02.jpg"
+            "verified": true,
+            "image": "/assets/other/other_02.jpg"
         },
         {
             "id": 28,
@@ -333,8 +333,8 @@
             "seller": "Recruiting Manager",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
-            "image": "/other_03.jpg"
+            "verified": false,
+            "image": "/assets/other/other_03.jpg"
         },
         {
             "id": 29,
@@ -345,8 +345,8 @@
             "seller": "Legal Assistant",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
-            "image": "/other_04.jpg"
+            "verified": false,
+            "image": "/assets/other/other_04.jpg"
         },
         {
             "id": 30,
@@ -357,8 +357,8 @@
             "seller": "Account Representative II",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : false,
-            "image": "/other_05.jpg"
+            "verified": false,
+            "image": "/assets/other/other_05.jpg"
         },
         {
             "id": 31,
@@ -369,8 +369,8 @@
             "seller": "Payment Adjustment Coordinator",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : true,
-            "image": "/other_06.jpg"
+            "verified": true,
+            "image": "/assets/other/other_06.jpg"
         },
         {
             "id": 32,
@@ -381,8 +381,8 @@
             "seller": "Sales Representative",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : true,
-            "image": "/other_07.jpg"
+            "verified": true,
+            "image": "/assets/other/other_07.jpg"
         },
         {
             "id": 33,
@@ -393,8 +393,8 @@
             "seller": "Registered Nurse",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : true,
-            "image": "/other_08.jpg"
+            "verified": true,
+            "image": "/assets/other/other_08.jpg"
         },
         {
             "id": 34,
@@ -405,8 +405,8 @@
             "seller": "Project Manager",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : false,
-            "image": "/other_09.jpg"
+            "verified": false,
+            "image": "/assets/other/other_09.jpg"
         },
         {
             "id": 35,
@@ -417,8 +417,8 @@
             "seller": "Account Representative II",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : true,
-            "image": "/other_10.jpg"
+            "verified": true,
+            "image": "/assets/other/other_10.jpg"
         }
     ],
     "categories": [
@@ -449,13 +449,11 @@
             "value": 1,
             "label": "Ship to DK",
             "icon": "/dk_flag.svg"
-       
         },
         {
             "value": 2,
             "label": "Ship to FR",
             "icon": "/france_flag.svg"
-
         }
     ],
     "languages": [
@@ -463,7 +461,7 @@
             "value": "EN",
             "label": "English, USA",
             "icon": "/usa_flag.svg"
-        },  
+        },
         {
             "value": "DK",
             "label": "Denmark, DKK",
@@ -475,13 +473,12 @@
             "icon": "/france_flag.svg"
         }
     ],
-
     "links": [
         {
             "value": "Profile",
             "label": "Profile",
             "icon": "/person.svg"
-        },  
+        },
         {
             "value": "Message",
             "label": "Message",
@@ -504,7 +501,7 @@
                 "value": "Home",
                 "label": "Home",
                 "icon": "/home.svg"
-            },  
+            },
             {
                 "value": "Categories",
                 "label": "Categories",
@@ -547,5 +544,19 @@
                 "label": "Privacy policy"
             }
         ]
-    }
+    },
+    "bannersInfo": [
+        {
+            "id": 1,
+            "name": "Home and outdoor",
+            "image": "/assets/bg/home_banner_top.jpg",
+            "category": "Home"
+        },
+        {
+            "id": 2,
+            "name": "Consumer electronics and gadgets",
+            "image": "/assets/bg/home_banner_down.jpg",
+            "category": "Tech"
+        }
+    ]
 }

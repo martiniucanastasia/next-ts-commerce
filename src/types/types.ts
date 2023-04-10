@@ -52,3 +52,10 @@ export type BurgerContents = {
     label: string;
   }[];
 };
+
+export type BannersInfo = {
+  id: number;
+  name: string;
+  image: string;
+  category: string;
+}[];
