@@ -2,7 +2,9 @@ import { Button } from "@/components/UI/Buttons/Button";
 import { Container, pxToRem } from "@/styles/_common";
 import { device } from "@/styles/_sizes";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const radiusValue = pxToRem(6);
 
 export const bannerAndProductsStyles = {
   BannerAndProductsContainer: styled(Container)`
@@ -20,7 +22,8 @@ export const bannerAndProductsStyles = {
 
   BlockWrapper: styled.div`
     background-color: white;
-    border-radius: ${pxToRem(6)};
+
+    border-radius: ${radiusValue};
   `,
 
   BannerAndProductsWrapper: styled.div`
@@ -29,7 +32,7 @@ export const bannerAndProductsStyles = {
     border: 1px solid var(--gray-300);
     border-width: ${pxToRem(1)} ${pxToRem(1)} 0px ${pxToRem(1)};
 
-    border-radius: ${pxToRem(6)};
+    border-radius: ${radiusValue};
 
     @media ${device.mobileS} {
       border: none;
@@ -41,13 +44,12 @@ export const bannerAndProductsStyles = {
     position: relative;
     display: flex;
 
-    width: ${pxToRem(284)};
     height: ${pxToRem(256)};
 
     aspect-ratio: 71/64;
 
     border-bottom: 1px solid var(--gray-300);
-    border-bottom-left-radius: 6px;
+    border-bottom-left-radius: ${radiusValue};
 
     img {
       position: absolute;
@@ -56,8 +58,8 @@ export const bannerAndProductsStyles = {
       width: 100%;
       height: 100%;
 
-      border-top-left-radius: ${pxToRem(6)};
-      border-bottom-left-radius: ${pxToRem(6)};
+      border-top-left-radius: ${radiusValue};
+      border-bottom-left-radius: ${radiusValue};
 
       @media ${device.mobileS} {
         display: none;
@@ -99,6 +101,8 @@ export const bannerAndProductsStyles = {
   Link: styled(Link)``,
 
   BannerLinkButton: styled(Button)`
+    display: block;
+
     border: none;
     box-shadow: rgba(56, 56, 56, 0.08) 0 1px 2px 0;
     color: var(--dark-700);
@@ -115,7 +119,7 @@ export const bannerAndProductsStyles = {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    border-bottom-right-radius: ${pxToRem(6)};
+    border-bottom-right-radius: ${radiusValue};
 
     @media ${device.mobileXXS} {
       display: flex;
@@ -165,24 +169,15 @@ export const bannerAndProductsStyles = {
   `,
 
   ProductPriceBlock: styled.div`
-    display: flex;
-    flex-wrap: wrap;
-
-    span:first-of-type {
-      width: 100%;
-    }
-
     @media ${device.mobileXXS} {
       display: flex;
       gap: ${pxToRem(3)};
-
-      span:first-of-type {
-        width: auto;
-      }
     }
   `,
 
   ProductPrice: styled.span`
+    display: block;
+
     font-size: var(--text-xxs);
     color: var(--gray-500);
   `,
@@ -192,6 +187,14 @@ export const bannerAndProductsStyles = {
 
     @media ${device.mobileS} {
       display: flex;
+      justify-content: flex-start;
+
+      border-top: none;
+
+      width: 100%;
+      padding: ${pxToRem(20)} ${pxToRem(22)};
+
+      gap: ${pxToRem(6)};
     }
   `,
 };

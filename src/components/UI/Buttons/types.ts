@@ -8,13 +8,12 @@ export type Variant =
   | "quaternary"
   | "fifth";
 export type Visual = "left" | "center" | "right" | "standart";
-export type Kind = "mobile";
+
 
 export interface ButtonProps {
   size?: Size;
   variant?: Variant;
   visual?: Visual;
-  kind?: Kind;
   className?: string;
   available?: boolean;
   disabled?: boolean;

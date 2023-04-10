@@ -48,7 +48,7 @@ const BannerAndProductsBlock = ({
         <S.BannerWrapper>
           <S.InfoWrapper>
             <S.BannerName>{title}</S.BannerName>
-            <S.Link href="/">
+            <S.Link href="/categories?">
               <S.BannerLinkButton variant="secondary">
                 Shop now
               </S.BannerLinkButton>
@@ -80,10 +80,12 @@ const BannerAndProductsBlock = ({
             ))}
         </S.ProductsWrapper>
       </S.BannerAndProductsWrapper>
-      <S.MobileButton variant="secondary" kind="mobile">
-        Shop now
-        <ArrowRight />
-      </S.MobileButton>
+      <S.Link href="/categories?">
+        <S.MobileButton variant="secondary">
+          Shop now
+          <ArrowRight />
+        </S.MobileButton>
+      </S.Link>
     </S.BlockWrapper>
   );
 };

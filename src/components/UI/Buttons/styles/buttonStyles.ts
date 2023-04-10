@@ -1,5 +1,5 @@
 import { pxToRem } from "@/styles/_common";
-import { ButtonProps, Kind, Size, Variant, Visual } from "../types";
+import { ButtonProps, Size, Variant, Visual } from "../types";
 
 import styled, {
   css,
@@ -160,29 +160,8 @@ const getAvailableStyles = ({
     `;
 };
 
-export const getMobileButton = ({
-  kind = "mobile",
-}: ThemedStyledProps<Pick<ButtonProps, "kind">, DefaultTheme>) => {
-  const mapper: Record<Kind, FlattenSimpleInterpolation> = {
-    mobile: css`
-      justify-content: flex-start;
-      
-      width: 100%;
-      
-      border: none;
-      border-bottom: 1px solid var(--gray-300);
-
-      gap: ${pxToRem(6)};
-      padding: ${pxToRem(20)};
-    `,
-   
-  };
-
-  return mapper[kind];
-};
-
 export const buttonStyled = {
-  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual" | "available" | "kind">>`
+  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual" | "available">>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +181,6 @@ export const buttonStyled = {
     ${getVariantStyles}
     ${getGroupStyles}
     ${getAvailableStyles}
-    ${getMobileButton}
+  
   `,
 };
