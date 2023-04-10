@@ -1,4 +1,5 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu";
+import { ServicesSection } from "@/pages/HomePage/ServicesSection/ServicesSection";
 import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
 import { SubscribeSection } from "@/components/Subscribe/SubscribeSection";
 import { Footer } from "@/components/Footer/Footer";
@@ -34,6 +35,7 @@ export default async function Page() {
       />
       {/* // INTRO SECTION */}
       <DealsAndOffers products={products} currentOffer={currentOffer} />
+      <ServicesSection />
       <SubscribeSection />
       <Footer languages={languages} />
     </>
