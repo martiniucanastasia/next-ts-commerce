@@ -12,6 +12,8 @@ export const navigationMenuStyles = {
     display: flex;
     align-items: center;
 
+    background-color: white;
+
     padding: ${pxToRem(22)} 0;
 
     @media ${device.mobile} {
@@ -75,8 +77,7 @@ export const navigationMenuStyles = {
   `,
 
   Button: styled(Button)`
-    padding-left: ${pxToRem(23)};
-    padding-right: ${pxToRem(23)};
+    padding: ${pxToRem(10)} ${pxToRem(23)};
   `,
 
   HeaderLinksWrapper: styled.ul`
@@ -107,7 +108,6 @@ export const navigationMenuStyles = {
       }
     }
   `,
- 
 
   HeaderLink: styled(Link)`
     text-align: center;
@@ -122,6 +122,8 @@ export const navigationMenuStyles = {
     padding: ${pxToRem(7)} 0;
     border-top: 1px solid var(--gray-200);
     border-bottom: 1px solid var(--gray-200);
+
+    background-color: white;
 
     @media ${device.mobile} {
       padding: ${pxToRem(15)} 0;

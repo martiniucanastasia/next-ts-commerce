@@ -1,11 +1,18 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu";
 import { ServicesSection } from "@/pages/HomePage/ServicesSection/ServicesSection";
+import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
+import { SubscribeSection } from "@/components/Subscribe/SubscribeSection";
+import { Footer } from "@/components/Footer/Footer";
 
 import { getCategories } from "@/helpers/getCategories";
 import { getLanguages } from "../helpers/getLanguage";
 import { getShippingInfo } from "../helpers/getShippingInfo";
 import { getHeaderLinks } from "@/helpers/getHeaderLinks";
 import { getBurgerData } from "@/helpers/getBurgerData";
+import { getProducts } from "@/helpers/getProducts";
+import { getCurrentOffer } from "@/helpers/getCurrentOffer";
+
+import { Product, currentOffer } from "@/types/types";
 
 export default async function Page() {
   const categories = await getCategories();
@@ -13,6 +20,9 @@ export default async function Page() {
   const shippingInfo = await getShippingInfo();
   const headerLinks = await getHeaderLinks();
   const burgerContents = await getBurgerData();
+
+  const products: Product[] = await getProducts();
+  const currentOffer: currentOffer = await getCurrentOffer(1);
 
   return (
     <>
@@ -23,7 +33,11 @@ export default async function Page() {
         headerLinks={headerLinks}
         burgerContents={burgerContents}
       />
+      {/* // INTRO SECTION */}
+      <DealsAndOffers products={products} currentOffer={currentOffer} />
       <ServicesSection />
+      <SubscribeSection />
+      <Footer languages={languages} />
     </>
   );
 }
