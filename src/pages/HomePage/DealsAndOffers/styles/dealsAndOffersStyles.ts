@@ -49,7 +49,7 @@ export const dealsAndOffersStyles = {
     }
   `,
 
-  DealsAndOffersTitle: styled.h4`
+  DealsAndOffersTitle: styled.h3`
     @media ${device.mobileXXS} {
       font-size: var(--text-m);
     }

@@ -59,7 +59,11 @@ export const getVariantStyles = ({
   const mapper: Record<Variant, FlattenSimpleInterpolation> = {
     primary: css`
       color: white;
-      background-image: var(--primary-gradient);
+      background-image: linear-gradient(
+        to left,
+        rgba(18, 127, 255, 1) 0%,
+        rgba(0, 103, 255, 1) 100%
+      );
 
       svg path {
         fill: currentColor;
@@ -149,19 +153,20 @@ const getAvailableStyles = ({
       border: 1px solid var(--gray-300);
       color: var(--gray-500);
 
-
       :hover {
         background-image: none;
       }
 
-      svg{
+      svg {
         fill: var(--gray-500);
       }
     `;
 };
 
 export const buttonStyled = {
-  Button: styled.button<Pick<ButtonProps, "size" | "variant" | "visual" | "available">>`
+  Button: styled.button<
+    Pick<ButtonProps, "size" | "variant" | "visual" | "available">
+  >`
     display: flex;
     justify-content: center;
     align-items: center;

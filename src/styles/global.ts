@@ -20,6 +20,11 @@ ${fontStyles}
     margin: 0;
   }
 
+  h2 {
+    font-size: var(--text-xxl);
+    font-weight: 600;
+  }
+
   h3 {
     font-size: var(--text-l);
     font-weight: 600;

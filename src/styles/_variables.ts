@@ -20,14 +20,6 @@ const colors = css`
 
   --warning: #ff9017;
   --warning-100: #ffe5bf;
-
-  --notice:
-
-  --primary-gradient: linear-gradient(
-    to right,
-    rgba(18, 127, 255, 1) 0%,
-    rgba(0, 103, 255, 1) 100%
-  );
 `;
 
 const fontSizes = css`
