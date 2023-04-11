@@ -1,6 +1,7 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu";
 import { ServicesSection } from "@/pages/HomePage/ServicesSection/ServicesSection";
 import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
+import { SuppliersSection } from "@/pages/HomePage/SuppliersSection/SuppliersSection";
 import { SubscribeSection } from "@/components/Subscribe/SubscribeSection";
 import { Footer } from "@/components/Footer/Footer";
 
@@ -9,6 +10,7 @@ import { getLanguages } from "../helpers/getLanguage";
 import { getShippingInfo } from "../helpers/getShippingInfo";
 import { getHeaderLinks } from "@/helpers/getHeaderLinks";
 import { getBurgerData } from "@/helpers/getBurgerData";
+import { getSuppliers } from "@/helpers/getSuppliers";
 import { getProducts } from "@/helpers/getProducts";
 import { getCurrentOffer } from "@/helpers/getCurrentOffer";
 
@@ -20,6 +22,7 @@ export default async function Page() {
   const shippingInfo = await getShippingInfo();
   const headerLinks = await getHeaderLinks();
   const burgerContents = await getBurgerData();
+  const suppliers = await getSuppliers();
 
   const products: Product[] = await getProducts();
   const currentOffer: currentOffer = await getCurrentOffer(1);
@@ -36,6 +39,7 @@ export default async function Page() {
       {/* // INTRO SECTION */}
       <DealsAndOffers products={products} currentOffer={currentOffer} />
       <ServicesSection />
+      <SuppliersSection suppliers={suppliers} />
       <SubscribeSection />
       <Footer languages={languages} />
     </>
