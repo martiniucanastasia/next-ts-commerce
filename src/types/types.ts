@@ -11,6 +11,11 @@ export type Product = {
   image: string;
 };
 
+export type currentOffer = {
+  id: number;
+  value: string;
+};
+
 export type Categories = {
   value: number;
   label: string;

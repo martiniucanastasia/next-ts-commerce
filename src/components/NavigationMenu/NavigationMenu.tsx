@@ -58,7 +58,9 @@ export const NavigationMenu = ({
               onChange={(e) => console.log(e)}
             />
 
-            <S.Button visual="right">Search</S.Button>
+            <S.Button variant="primary" visual="right">
+              Search
+            </S.Button>
           </S.HeaderSearchWrapper>
 
           <S.HeaderLinksWrapper>
@@ -136,7 +138,9 @@ export const NavigationMenu = ({
                   isSearchable={false}
                   placeholder={`${shippingInfo[0].label}`}
                   options={shippingInfo}
-                  onChange={(value: OptionType['icon']) => setShippingFlag(value?.icon)}
+                  onChange={(value: OptionType["icon"]) =>
+                    setShippingFlag(value?.icon)
+                  }
                 />
               </S.ShippingSelectWrapper>
             </S.NavSelectWrapper>
