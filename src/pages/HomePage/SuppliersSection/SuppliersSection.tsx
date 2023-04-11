@@ -9,13 +9,13 @@ export const SuppliersSection = ({ suppliers }: { suppliers: Suppliers }) => {
     <S.SuppliersContainer>
       <S.SuppliersSectionTitle>Suppliers by region</S.SuppliersSectionTitle>
       <S.SuppliersWrapper>
-        {suppliers.map((item) => {
+        {suppliers.map(({ value, label, icon, site }) => {
           return (
-            <S.SupplierWrapper key={item.value}>
-              <Image src={item.icon} width={28} height={20} alt={item.label} />
+            <S.SupplierWrapper key={value}>
+              <Image src={icon} width={28} height={20} alt={label} />
               <S.SupplierInfo>
-              <S.CountryName>{item.label}</S.CountryName>
-              <S.SiteLink href={"/"}>{item.site}</S.SiteLink>
+                <p>{label}</p>
+                <S.SiteLink href={"/"}>{site}</S.SiteLink>
               </S.SupplierInfo>
             </S.SupplierWrapper>
           );

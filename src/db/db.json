@@ -549,64 +549,64 @@
     },
     "suppliers": [
         {
-            "value": "Arabic Emirates",
+            "value": "arabic_emirates",
             "label": "Arabic Emirates",
             "site": "shopname.ae",
-            "icon": "/arabic_flag.svg"
+            "icon": "/assets/flags/arabic_flag.svg"
         },
         {
-            "value": "Australia",
+            "value": "australia",
             "label": "Australia",
             "site": "shopname.ae",
-            "icon": "/australia_flag.svg"
+            "icon": "/assets/flags/australia_flag.svg"
         },
         {
-            "value": "United States",
+            "value": "united_states",
             "label": "United States",
             "site": "shopname.ae",
-            "icon": "/usa_flag.svg"
+            "icon": "/assets/flags/usa_flag.svg"
         },
         {
-            "value": "Russia",
+            "value": "russia",
             "label": "Russia",
             "site": "shopname.ru",
-            "icon": "/russia_flag.svg"
+            "icon": "/assets/flags/russia_flag.svg"
         }
         ,{
-            "value": "Italy",
+            "value": "italy",
             "label": "Italy",
             "site": "shopname.it",
-            "icon": "/italy_flag.svg"
+            "icon": "/assets/flags/italy_flag.svg"
         },
         {
-            "value": "Denmark",
+            "value": "denmark",
             "label": "Denmark",
             "site": "shopname.com.dk",
-            "icon": "/dk_flag.svg"
+            "icon": "/assets/flags/dk_flag.svg"
         },
         {
-            "value": "France",
+            "value": "france",
             "label": "France",
             "site": "shopname.com.fr",
-            "icon": "/france_flag.svg"
+            "icon": "/assets/flags/france_flag.svg"
         },
         {
-            "value": "Germany",
+            "value": "germany",
             "label": "Germany",
             "site": "shopname.ae",
-            "icon": "/germany_flag.svg"
+            "icon": "/assets/flags/germany_flag.svg"
         },
         {
-            "value": "China",
+            "value": "china",
             "label": "China",
             "site": "shopname.ae",
-            "icon": "/china_flag.svg"
+            "icon": "/assets/flags/china_flag.svg"
         },
         {
-            "value": "Great Britain",
+            "value": "great_britain",
             "label": "Great Britain",
             "site": "shopname.co.uk",
-            "icon": "/uk_flag.svg"
+            "icon": "/assets/flags/uk_flag.svg"
         }
     ]
 }

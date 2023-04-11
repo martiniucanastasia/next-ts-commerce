@@ -12,21 +12,17 @@ export const suppliersSectionStyles = {
 
   SuppliersSectionTitle: styled.h4`
     padding: ${pxToRem(30)} 0 ${pxToRem(25)} 0;
-
-    @media ${device.mobileXXS} {
-      font-size: var(--text-m);
-    }
   `,
 
   SuppliersWrapper: styled.ul`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
     flex-wrap: wrap;
 
     gap: ${pxToRem(18)};
 
-    @media ${device.mobile} {
+    @media ${device.mobileXS} {
       justify-content: center;
     }
   `,
@@ -42,10 +38,8 @@ export const suppliersSectionStyles = {
     display: flex;
     flex-direction: column;
 
-    padding-left: ${pxToRem(10)};
+    margin-left: ${pxToRem(10)};
   `,
-
-  CountryName: styled.p``,
 
   SiteLink: styled(Link)`
     font-size: var(--text-xxs);
