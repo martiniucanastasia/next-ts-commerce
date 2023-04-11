@@ -1,5 +1,10 @@
 import { NavigationMenu } from "@/components/NavigationMenu/NavigationMenu";
+import { DealsAndOffers } from "@/pages/HomePage/DealsAndOffers/DealsAndOffers";
 import { RecommendationSection } from "@/pages/HomePage/Recommendations/RecommendationSection";
+import { ServicesSection } from "@/pages/HomePage/ServicesSection/ServicesSection";
+import { SuppliersSection } from "@/pages/HomePage/SuppliersSection/SuppliersSection";
+import { SubscribeSection } from "@/components/Subscribe/SubscribeSection";
+import { Footer } from "@/components/Footer/Footer";
 
 import { getCategories } from "@/helpers/getCategories";
 import { getLanguages } from "../helpers/getLanguage";
@@ -7,8 +12,10 @@ import { getShippingInfo } from "../helpers/getShippingInfo";
 import { getHeaderLinks } from "@/helpers/getHeaderLinks";
 import { getBurgerData } from "@/helpers/getBurgerData";
 import { getProducts } from "@/helpers/getProducts";
+import { getSuppliers } from "@/helpers/getSuppliers";
+import { getCurrentOffer } from "@/helpers/getCurrentOffer";
 
-import { Product } from "@/types/types";
+import { Product, currentOffer } from "@/types/types";
 
 export default async function Page() {
   const categories = await getCategories();
@@ -17,6 +24,8 @@ export default async function Page() {
   const headerLinks = await getHeaderLinks();
   const burgerContents = await getBurgerData();
   const products: Product[] = await getProducts();
+  const suppliers = await getSuppliers();
+  const currentOffer: currentOffer = await getCurrentOffer(1);
 
   return (
     <>
@@ -27,7 +36,13 @@ export default async function Page() {
         headerLinks={headerLinks}
         burgerContents={burgerContents}
       />
+      {/* // INTRO SECTION */}
+      <DealsAndOffers products={products} currentOffer={currentOffer} />
       <RecommendationSection products={products} />
+      <ServicesSection />
+      <SuppliersSection suppliers={suppliers} />
+      <SubscribeSection />
+      <Footer languages={languages} />
     </>
   );
 }
