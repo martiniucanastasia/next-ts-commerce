@@ -9,7 +9,7 @@
             "seller": "Speech Pathologist",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/cloth_01.jpg"
         },
         {
@@ -21,7 +21,7 @@
             "seller": "Software Test Engineer II",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/cloth_02.jpg"
         },
         {
@@ -33,7 +33,7 @@
             "seller": "Assistant Media Planner",
             "brand": "H&M",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/cloth_03.jpg"
         },
         {
@@ -45,7 +45,7 @@
             "seller": "Paralegal",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/cloth_04.jpg"
         },
         {
@@ -57,7 +57,7 @@
             "seller": "Help Desk Technician",
             "brand": "Nike",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/cloth_05.jpg"
         },
         {
@@ -69,7 +69,7 @@
             "seller": "Teacher",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/cloth_06.jpg"
         },
         {
@@ -81,7 +81,7 @@
             "seller": "Project Manager",
             "brand": "Diesel",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/cloth_07.jpg"
         },
         {
@@ -93,7 +93,7 @@
             "seller": "Analog Circuit Design manager",
             "brand": "GoPro",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_01.jpg"
         },
         {
@@ -105,7 +105,7 @@
             "seller": "Administrative Officer",
             "brand": "Apple",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_02.jpg"
         },
         {
@@ -115,9 +115,9 @@
             "rating": 6,
             "price": 260,
             "seller": "Software Test Engineer II",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "Old items",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_03.jpg"
         },
         {
@@ -127,9 +127,9 @@
             "rating": 8,
             "price": 210,
             "seller": "Social Worker",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/tech_04.jpg"
         },
         {
@@ -141,7 +141,7 @@
             "seller": "Research Assistant I",
             "brand": "Apple",
             "condition": "Refurbished",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_05.jpg"
         },
         {
@@ -153,7 +153,7 @@
             "seller": "Social Worker",
             "brand": "CosmicByte",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_06.jpg"
         },
         {
@@ -165,19 +165,19 @@
             "seller": "Information Systems Manager",
             "brand": "Canon",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_07.jpg"
         },
         {
             "id": 15,
-            "name": "Macbook Air",
+            "name": "MacBook Air",
             "category": "Tech",
             "rating": 7,
             "price": 300,
             "seller": "Environmental Tech",
             "brand": "Apple",
             "condition": "Old items",
-            "verified" : false,
+            "verified": false,
             "image": "/tech_08.jpg"
         },
         {
@@ -189,7 +189,7 @@
             "seller": "Safety Technician IV",
             "brand": "Apple",
             "condition": "Refurbished",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_09.jpg"
         },
         {
@@ -201,7 +201,7 @@
             "seller": "Programmer Analyst IV",
             "brand": "CosmicByte",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_10.jpg"
         },
         {
@@ -211,9 +211,9 @@
             "rating": 5,
             "price": 20,
             "seller": "Systems Administrator III",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "Refurbished",
-            "verified" : true,
+            "verified": true,
             "image": "/tech_11.jpg"
         },
         {
@@ -225,7 +225,7 @@
             "seller": "Social Worker",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/furn_01.jpg"
         },
         {
@@ -237,19 +237,19 @@
             "seller": "Marketing Assistant",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
+            "verified": false,
             "image": "/furn_02.jpg"
         },
         {
             "id": 21,
-            "name": "Beije Armchair",
+            "name": "Beige Armchair",
             "category": "Furniture",
             "rating": 4,
             "price": 95,
             "seller": "Chemical Engineer",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/furn_03.jpg"
         },
         {
@@ -261,7 +261,7 @@
             "seller": "Financial Advisor",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/furn_04.jpg"
         },
         {
@@ -273,7 +273,7 @@
             "seller": "Civil Engineer",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : true,
+            "verified": true,
             "image": "/furn_05.jpg"
         },
         {
@@ -285,7 +285,7 @@
             "seller": "Internal Auditor",
             "brand": "Amazon Furniture",
             "condition": "IKEA",
-            "verified" : false,
+            "verified": false,
             "image": "/furn_06.jpg"
         },
         {
@@ -297,7 +297,7 @@
             "seller": "Computer Systems Analyst I",
             "brand": "Amazon Furniture",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/furn_07.jpg"
         },
         {
@@ -309,7 +309,7 @@
             "seller": "Cost Accountant",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : false,
+            "verified": false,
             "image": "/other_01.jpg"
         },
         {
@@ -321,7 +321,7 @@
             "seller": "Human Resources Assistant I",
             "brand": "IKEA",
             "condition": "New",
-            "verified" : true,
+            "verified": true,
             "image": "/other_02.jpg"
         },
         {
@@ -333,7 +333,7 @@
             "seller": "Recruiting Manager",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
+            "verified": false,
             "image": "/other_03.jpg"
         },
         {
@@ -345,19 +345,19 @@
             "seller": "Legal Assistant",
             "brand": "IKEA",
             "condition": "Old items",
-            "verified" : false,
+            "verified": false,
             "image": "/other_04.jpg"
         },
         {
             "id": 30,
-            "name": "Wall Picture",
+            "name": "Wall Pictire",
             "category": "Home",
             "rating": 7,
             "price": 15,
             "seller": "Account Representative II",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : false,
+            "verified": false,
             "image": "/other_05.jpg"
         },
         {
@@ -369,7 +369,7 @@
             "seller": "Payment Adjustment Coordinator",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : true,
+            "verified": true,
             "image": "/other_06.jpg"
         },
         {
@@ -381,7 +381,7 @@
             "seller": "Sales Representative",
             "brand": "Amazon Furniture",
             "condition": "Old items",
-            "verified" : true,
+            "verified": true,
             "image": "/other_07.jpg"
         },
         {
@@ -393,7 +393,7 @@
             "seller": "Registered Nurse",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : true,
+            "verified": true,
             "image": "/other_08.jpg"
         },
         {
@@ -405,7 +405,7 @@
             "seller": "Project Manager",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : false,
+            "verified": false,
             "image": "/other_09.jpg"
         },
         {
@@ -417,7 +417,7 @@
             "seller": "Account Representative II",
             "brand": "LG",
             "condition": "Refurbished",
-            "verified" : true,
+            "verified": true,
             "image": "/other_10.jpg"
         }
     ],
@@ -467,13 +467,11 @@
             "value": 1,
             "label": "Ship to DK",
             "icon": "/dk_flag.svg"
-       
         },
         {
             "value": 2,
             "label": "Ship to FR",
             "icon": "/france_flag.svg"
-
         }
     ],
     "languages": [
@@ -481,7 +479,7 @@
             "value": "EN",
             "label": "English, USA",
             "icon": "/usa_flag.svg"
-        },  
+        },
         {
             "value": "DK",
             "label": "Denmark, DKK",
@@ -498,7 +496,7 @@
             "value": "Profile",
             "label": "Profile",
             "icon": "/person.svg"
-        },  
+        },
         {
             "value": "Message",
             "label": "Message",
@@ -521,7 +519,7 @@
                 "value": "Home",
                 "label": "Home",
                 "icon": "/home.svg"
-            },  
+            },
             {
                 "value": "Categories",
                 "label": "Categories",
