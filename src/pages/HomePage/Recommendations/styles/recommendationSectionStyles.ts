@@ -10,32 +10,44 @@ export const recommendationSectionStyles = {
       padding: 0 ${pxToRem(10)};
     }
   `,
+
   RecommendSectionTitle: styled.h4`
     padding: ${pxToRem(30)} 0 ${pxToRem(25)} 0;
-
-    @media ${device.mobileXXS} {
-      font-size: var(--text-m);
-    }
   `,
 
   RecommendProductsWrapper: styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
 
     gap: ${pxToRem(20)};
 
-    @media ${device.mobileXXS} {
+    @media ${device.tabletL} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media ${device.mobile} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media ${device.mobileS} {
+      grid-template-columns: repeat(2, 1fr);
       gap: ${pxToRem(8)};
+    }
+
+    @media ${device.mobileXXXS} {
+      grid-template-columns: repeat(1, 1fr);
     }
   `,
 
   ProductWrapper: styled(Link)`
+    text-align: center;
+
     max-width: ${pxToRem(220)};
     height: ${pxToRem(310)};
 
     background-color: white;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-300);
     border-radius: ${pxToRem(6)};
 
     padding: ${pxToRem(10)} ${pxToRem(10)} ${pxToRem(15)};
@@ -56,6 +68,7 @@ export const recommendationSectionStyles = {
   ProductInfoBlock: styled.div`
     display: flex;
     flex-direction: column;
+    text-align: start;
 
     padding-top: ${pxToRem(15)};
     padding-left: ${pxToRem(6)};
@@ -73,7 +86,6 @@ export const recommendationSectionStyles = {
 
   ProductInfo: styled.span`
     display: block;
-    width: ${pxToRem(140)};
 
     color: var(--gray-500);
 
