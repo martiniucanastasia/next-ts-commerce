@@ -58,6 +58,12 @@ export type BurgerContents = {
   }[];
 };
 
+export type BannersInfo = {
+  id: number;
+  name: string;
+  image: string;
+  category: string;
+}[];
 export type Suppliers = {
   value: string;
   label: string;

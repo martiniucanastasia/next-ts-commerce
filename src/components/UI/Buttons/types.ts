@@ -9,6 +9,7 @@ export type Variant =
   | "fifth";
 export type Visual = "left" | "center" | "right" | "standart";
 
+
 export interface ButtonProps {
   size?: Size;
   variant?: Variant;
