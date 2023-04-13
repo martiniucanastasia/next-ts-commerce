@@ -115,7 +115,7 @@
             "rating": 6,
             "price": 260,
             "seller": "Software Test Engineer II",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "Old items",
             "verified": true,
             "image": "/assets/tech/tech_03.jpg"
@@ -127,7 +127,7 @@
             "rating": 8,
             "price": 210,
             "seller": "Social Worker",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "New",
             "verified": false,
             "image": "/assets/tech/tech_04.jpg"
@@ -170,7 +170,7 @@
         },
         {
             "id": 15,
-            "name": "Macbook Air",
+            "name": "MacBook Air",
             "category": "Tech",
             "rating": 7,
             "price": 300,
@@ -211,7 +211,7 @@
             "rating": 5,
             "price": 20,
             "seller": "Systems Administrator III",
-            "brand": "Xioami",
+            "brand": "Xiaomi",
             "condition": "Refurbished",
             "verified": true,
             "image": "/assets/tech/tech_11.jpg"
@@ -242,7 +242,7 @@
         },
         {
             "id": 21,
-            "name": "Beije Armchair",
+            "name": "Beige Armchair",
             "category": "Furniture",
             "rating": 4,
             "price": 95,
@@ -438,6 +438,24 @@
             "id": 3,
             "name": "Home"
         }
+    ], 
+    "offers": [
+        {
+            "id": 1,
+            "value": "04/15/2023" 
+        },
+        {
+            "id": 2,
+            "value": "06/05/2023" 
+        },
+        {
+            "id": 3,
+            "value": "07/06/2023" 
+        },
+        {
+            "id": 2,
+            "value": "08/06/2023" 
+        }
     ],
     "shipping": [
         {
@@ -557,6 +575,68 @@
             "name": "Consumer electronics and gadgets",
             "image": "/assets/bg/home_banner_down.jpg",
             "category": "Tech"
+        }
+    ],
+    "suppliers": [
+        {
+            "value": "arabic_emirates",
+            "label": "Arabic Emirates",
+            "site": "shopname.ae",
+            "icon": "/assets/flags/arabic_flag.svg"
+        },
+        {
+            "value": "australia",
+            "label": "Australia",
+            "site": "shopname.ae",
+            "icon": "/assets/flags/australia_flag.svg"
+        },
+        {
+            "value": "united_states",
+            "label": "United States",
+            "site": "shopname.ae",
+            "icon": "/assets/flags/usa_flag.svg"
+        },
+        {
+            "value": "russia",
+            "label": "Russia",
+            "site": "shopname.ru",
+            "icon": "/assets/flags/russia_flag.svg"
+        }
+        ,{
+            "value": "italy",
+            "label": "Italy",
+            "site": "shopname.it",
+            "icon": "/assets/flags/italy_flag.svg"
+        },
+        {
+            "value": "denmark",
+            "label": "Denmark",
+            "site": "shopname.com.dk",
+            "icon": "/assets/flags/dk_flag.svg"
+        },
+        {
+            "value": "france",
+            "label": "France",
+            "site": "shopname.com.fr",
+            "icon": "/assets/flags/france_flag.svg"
+        },
+        {
+            "value": "germany",
+            "label": "Germany",
+            "site": "shopname.ae",
+            "icon": "/assets/flags/germany_flag.svg"
+        },
+        {
+            "value": "china",
+            "label": "China",
+            "site": "shopname.ae",
+            "icon": "/assets/flags/china_flag.svg"
+        },
+        {
+            "value": "great_britain",
+            "label": "Great Britain",
+            "site": "shopname.co.uk",
+            "icon": "/assets/flags/uk_flag.svg"
         }
     ]
 }

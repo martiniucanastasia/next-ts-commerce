@@ -11,6 +11,11 @@ export type Product = {
   image: string;
 };
 
+export type currentOffer = {
+  id: number;
+  value: string;
+};
+
 export type Categories = {
   value: number;
   label: string;
@@ -58,4 +63,10 @@ export type BannersInfo = {
   name: string;
   image: string;
   category: string;
+}[];
+export type Suppliers = {
+  value: string;
+  label: string;
+  site: string;
+  icon: any;
 }[];

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { fontStyles } from "./_fonts";
+import { device } from "./_sizes";
 import { variables } from "./_variables";
 
 export const GlobalStyles = createGlobalStyle`
@@ -20,6 +21,11 @@ ${fontStyles}
     margin: 0;
   }
 
+  h2 {
+    font-size: var(--text-xxl);
+    font-weight: 600;
+  }
+
   h3 {
     font-size: var(--text-l);
     font-weight: 600;
@@ -28,6 +34,10 @@ ${fontStyles}
   h4 {
     font-size: var(--text-xl);
     font-weight: 600;
+
+    @media ${device.mobileXXS} {
+      font-size: var(--text-m);
+    }
   }
 
   html, body {
