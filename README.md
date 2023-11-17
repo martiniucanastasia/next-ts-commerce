@@ -17,3 +17,6 @@ npm run dev
 ```
 npm run server
 ```
+
+![Home](home-page-up-screen.png)
+![Home](home-page-down-screen.png)
